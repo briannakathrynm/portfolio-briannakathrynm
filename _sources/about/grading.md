@@ -35,7 +35,6 @@ def compute_grade(num_level1, num_level2, num_level3):
     else:
         if 3 <= num_level1 < 5:
             letter_grade = 'D'
-            print(f'Your grade is {letter_grade}.')
         elif 5 <= num_level1 < 10:
             letter_grade = 'D+'
         elif 10 <= num_level1 < 15:
