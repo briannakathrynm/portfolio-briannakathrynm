@@ -1,3 +1,3 @@
 # Portfolio Check 3
 
-I've demonstrated skill x in chapter y.
+I've demonstrated skills *summarize* and *visualize* in chapter 3.
