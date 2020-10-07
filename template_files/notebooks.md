@@ -1,14 +1,16 @@
 ---
-jupytext:
-  text_representation:
-    extension: .md
-    format_name: myst
-    format_version: 0.12
-    jupytext_version: 1.6.0
-kernelspec:
-  display_name: Python 3
-  language: python
-  name: python3
+jupyter:
+  jupytext:
+    formats: ipynb,md
+    text_representation:
+      extension: .md
+      format_name: markdown
+      format_version: '1.2'
+      jupytext_version: 1.6.0
+  kernelspec:
+    display_name: Python 3
+    language: python
+    name: python3
 ---
 
 # Content with notebooks
@@ -50,14 +52,14 @@ or see [the MyST markdown documentation](https://myst-parser.readthedocs.io/en/l
 Jupyter Book will also embed your code blocks and output in your book.
 For example, here's some sample Matplotlib code:
 
-```{code-cell} ipython3
+```python
 from matplotlib import rcParams, cycler
 import matplotlib.pyplot as plt
 import numpy as np
 plt.ion()
 ```
 
-```{code-cell} ipython3
+```python
 # Fixing random state for reproducibility
 np.random.seed(19680801)
 
