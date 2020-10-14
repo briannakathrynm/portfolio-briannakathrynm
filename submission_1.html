@@ -190,11 +190,6 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/submission_1.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
         
     </div>
 </div>
@@ -213,6 +208,18 @@
   <a class="reference internal nav-link" href="#for-python-level-3-prepare-level-2-and-access-level-3">
    For Python Level 3, Prepare Level 2, and Access Level 3
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#access-level-3">
+     Access Level 3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prepare-level-2">
+     Prepare Level 2
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -229,6 +236,328 @@
 <h1>Submission 1<a class="headerlink" href="#submission-1" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="for-python-level-3-prepare-level-2-and-access-level-3">
 <h2>For Python Level 3, Prepare Level 2, and Access Level 3<a class="headerlink" href="#for-python-level-3-prepare-level-2-and-access-level-3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="access-level-3">
+<h3>Access Level 3<a class="headerlink" href="#access-level-3" title="Permalink to this headline">¶</a></h3>
+<p>Access data from both common and uncommon formats and identify best practices for formats in different contexts.</p>
+<p>
+There are many different ways to access data in Pandas, whether you want to read into a more common format such as a CSV file, or if you to access data stored in an HDF5 table or in SAS format. 
+</p>
+<p> 
+When considering which format to use, you should also note the different types of separators that are the defaults of each method. For example, pd.read_csv defaults separation to a comma, while pd.read_table defaults to'\t'. Different file types also come with different parameters (whether optional or required) according to their designated Pandas function. 
+</p>
+<p>
+For a contextual example, consider pd.read_sql_table, pd.read_sql_query, and pd.read_sql. Although these functions seem very similar to each other, there are actually quite a few key differences. The list below describes each method and how you can use them.
+</p><p><strong>pd.read_sql_table</strong></p>
+<ul class="simple">
+<li><p>Reads an SQL database table into a DataFrame</p></li>
+<li><p>Takes in parse_dates, columns, chunksize</p></li>
+<li><p>Does not support DBAPI connections</p></li>
+</ul>
+<p><strong>pd.read_sql_query</strong></p>
+<ul class="simple">
+<li><p>Reads an SQL query into a DataFrame</p></li>
+<li><p>Takes in parse_dates, chunksize</p></li>
+<li><p>May support DBAPI connections depending on type</p></li>
+</ul>
+<p><strong>pd.read_sql</strong></p>
+<ul class="simple">
+<li><p>Read SQL query or database table into a DataFrame</p></li>
+<li><p>More for convenience, compatibility for previous methods</p></li>
+<li><p>Takes in parse_dates, columns, chunksize</p></li>
+</ul>
+<p>Now, I will be using SQLite to access the database for a dataset called <strong>Simple Folk</strong>.</p>
+<p>
+Link to database: http://2016.padjo.org/files/data/starterpack/simplefolks.sqlite<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;simplefolks.sqlite&#39;</span><span class="p">)</span>
+<span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DataFrame with the age, sex, and name of individuals</span>
+<span class="n">people_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT age, sex, name FROM people&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+<span class="c1"># DataFrame with pets, pet owners, and pet names</span>
+<span class="n">pet_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT name, owner_name FROM pets ORDER BY name&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Viewing DataFrames</span>
+<span class="n">people_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>sex</th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>33</td>
+      <td>M</td>
+      <td>Austin</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>90</td>
+      <td>M</td>
+      <td>Blair</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>28</td>
+      <td>F</td>
+      <td>Carolina</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>41</td>
+      <td>F</td>
+      <td>Dani</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>70</td>
+      <td>M</td>
+      <td>Donald</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Viewing DataFrames</span>
+<span class="n">pet_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>owner_name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Artemis</td>
+      <td>Dani</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Bumpkin</td>
+      <td>Georgina</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Donald</td>
+      <td>Donald</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Essy</td>
+      <td>Sherry</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Harambe</td>
+      <td>Dani</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Now, let’s say we wanted to list all of the 30 year old and older men in the people table. We can do this by implementing the query below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM people WHERE sex = &#39;M&#39; AND age &gt;= 30&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+<span class="n">query_1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>sex</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Austin</td>
+      <td>M</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Blair</td>
+      <td>M</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Donald</td>
+      <td>M</td>
+      <td>70</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Michael</td>
+      <td>M</td>
+      <td>48</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Zed</td>
+      <td>M</td>
+      <td>42</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Or, with the pet table we can find the pets name and type that are not dogs or cats. Personally, the bird named Harambe is my favorite.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query_2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT name, type FROM pets WHERE type != &#39;cat&#39; and TYPE != &#39;dog&#39;&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+<span class="n">query_2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Harambe</td>
+      <td>bird</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Hodor</td>
+      <td>bird</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Bumpkin</td>
+      <td>horse</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Secretariat</td>
+      <td>horse</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Harry Potter</td>
+      <td>horse</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Xerses</td>
+      <td>horse</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Jenkins</td>
+      <td>horse</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Luckily for us, SQLite databases and their respective tables usually come in a very easy-to-read format. In other cases where the data is not as easy to read in, we need to be able to clean and prepare it.</p>
+</div>
+<div class="section" id="prepare-level-2">
+<h3>Prepare Level 2<a class="headerlink" href="#prepare-level-2" title="Permalink to this headline">¶</a></h3>
+<p>Apply data reshaping, cleaning, and filtering as directed.</p>
+</div>
 </div>
 </div>
 
