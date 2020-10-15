@@ -17,17 +17,17 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# First, I'll load the xls file in and take a look at it uncleaned.
-unclean_table = pd.read_excel("tabn039.xls")
-unclean_table.head()
+# First, let's take a look at what we are dealing with
+enroll_uc_table = pd.read_excel("tabn503.20.xls")
+enroll_uc_table.head(10)
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mImportError[0m                               Traceback (most recent call last)
-[0;32m<ipython-input-7-ea9849ce8950>[0m in [0;36m<module>[0;34m[0m
-[1;32m      1[0m [0;31m# First, I'll load the xls file in and take a look at it uncleaned.[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
-[0;32m----> 2[0;31m [0munclean_table[0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mread_excel[0m[0;34m([0m[0;34m"tabn039.xls"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m      3[0m [0munclean_table[0m[0;34m.[0m[0mhead[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m<ipython-input-2-c4e80ee551e1>[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [0;31m# First, let's take a look at what we are dealing with[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 2[0;31m [0menroll_uc_table[0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mread_excel[0m[0;34m([0m[0;34m"tabn503.20.xls"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      3[0m [0menroll_uc_table[0m[0;34m.[0m[0mhead[0m[0;34m([0m[0;36m10[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 
 [0;32m/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/pandas/util/_decorators.py[0m in [0;36mwrapper[0;34m(*args, **kwargs)[0m
 [1;32m    294[0m                 )
