@@ -7,6 +7,6 @@
 
 # - part: Submission 1
 #   chapter 1:
-#     - file: main/submission_1.ipynb
-#     - file: main/tabn039.xls
-#     - file: main/simplefolks.sqlite
+#     - file: check1/submission_1.ipynb
+#     - file: check1/tabn039.xls
+#     - file: check1/simplefolks.sqlite
