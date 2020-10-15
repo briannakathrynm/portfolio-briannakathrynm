@@ -5,8 +5,15 @@
     - file: about/index
     - file: about/grading
 
-# - part: Submission 1
-#   chapters:
-#     - file: submission_1_intro
-#     - file: check1/
-#     - file: check1/
+- part: Submission 1
+  chapter 1:
+    - file: submission_1.ipynb
+    - file: tabn039.xls
+    - file: simplefolks.sqlite
+ chapter 2:
+    - file: submission_2.ipynb
+    - file: tabn503.20.xls
+ chapter 3:
+    - file: submission_3.ipynb
+ chapter 4:
+    - file: submission_4.ipynb
