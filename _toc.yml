@@ -5,8 +5,6 @@
     - file: about/index
     - file: about/grading
 
-# - part: Submission 1
-#   chapter 1:
-#     - file: check1/submission_1.ipynb
-#     - file: check1/tabn039.xls
-#     - file: check1/simplefolks.sqlite
+- part: Submission 1
+  chapter 1:
+    - file: check1/submission_1
