@@ -13,7 +13,7 @@ jupyter:
     name: python3
 ---
 
-# Submission 3
+# Submission 1 - Chapter 3
 In this submission, I will be attempting to earn **summarize level 3** and **visualize level 3**.
 
 ```python
