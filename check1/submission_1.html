@@ -217,16 +217,14 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#construct-level-3">
+   Construct Level 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#prepare-level-2">
    Prepare Level 2
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Prepare Level 2
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -241,7 +239,7 @@
                 
   <div class="section" id="submission-1">
 <h1>Submission 1<a class="headerlink" href="#submission-1" title="Permalink to this headline">¶</a></h1>
-<p>In this section of my portfolio I will be demonstrating skills for <strong>python level 3, prepare level 2, and access level 3</strong>. For more demonstration on <strong>prepare</strong>, please look <span class="xref myst">here</span>.</p>
+<p>In this section of my portfolio I will be demonstrating skills for <strong>python level 3, prepare level 2, construct level 3, and access level 3</strong>. For more demonstration on <strong>prepare</strong>, please look <span class="xref myst">here</span>.</p>
 <div class="section" id="access-level-3">
 <h2>Access Level 3<a class="headerlink" href="#access-level-3" title="Permalink to this headline">¶</a></h2>
 <p>Access data from both common and uncommon formats and identify best practices for formats in different contexts.</p>
@@ -273,8 +271,8 @@ For a contextual example, consider pd.read_sql_table, pd.read_sql_query, and pd.
 <li><p>Takes in parse_dates, columns, chunksize</p></li>
 </ul>
 </div>
-<div class="section" id="prepare-level-2">
-<h2>Prepare Level 2<a class="headerlink" href="#prepare-level-2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="construct-level-3">
+<h2>Construct Level 3<a class="headerlink" href="#construct-level-3" title="Permalink to this headline">¶</a></h2>
 <p>Now, I will be using SQLite to access the database for a dataset called <strong>Simple Folk</strong>.</p>
 <p>
 Link to database: http://2016.padjo.org/files/data/starterpack/simplefolks.sqlite
@@ -310,8 +308,9 @@ Link to database: http://2016.padjo.org/files/data/starterpack/simplefolks.sqlit
 </pre></div>
 </div>
 <p>Luckily for us, SQLite databases and their respective tables usually come in a very easy-to-read format. In other cases where the data is not as easy to read in, we need to be able to clean and prepare it.</p>
-<div class="section" id="id1">
-<h3>Prepare Level 2<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="prepare-level-2">
+<h2>Prepare Level 2<a class="headerlink" href="#prepare-level-2" title="Permalink to this headline">¶</a></h2>
 <p>Apply data reshaping, cleaning, and filtering as directed.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># First, I&#39;ll load the xls file in and take a look at it uncleaned.</span>
 <span class="n">unclean_table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;tabn039.xls&quot;</span><span class="p">)</span>
@@ -357,7 +356,6 @@ Link to database: http://2016.padjo.org/files/data/starterpack/simplefolks.sqlit
 <span class="n">df2</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="n">df2</span>
 </pre></div>
-</div>
 </div>
 </div>
 </div>
