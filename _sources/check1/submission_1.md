@@ -14,11 +14,10 @@ jupyter:
 ---
 
 # Submission 1
-#### For Python Level 3, Prepare Level 2, and Access Level 3
-In this section of my portfolio I will be demonstrating skills for the above list. For more demonstration on **Prepare**, please look [here](check1/submission_4.md).
+In this section of my portfolio I will be demonstrating skills for **python level 3, prepare level 2, and access level 3**. For more demonstration on **prepare**, please look [here](check1/submission_4.md).
 
 
-##### Access Level 3
+### Access Level 3
 Access data from both common and uncommon formats and identify best practices for formats in different contexts. 
 <p>
 There are many different ways to access data in Pandas, whether you want to read into a more common format such as a CSV file, or if you to access data stored in an HDF5 table or in SAS format. 
@@ -45,6 +44,9 @@ For a contextual example, consider pd.read_sql_table, pd.read_sql_query, and pd.
 * Read SQL query or database table into a DataFrame
 * More for convenience, compatibility for previous methods
 * Takes in parse_dates, columns, chunksize
+
+
+### Prepare Level 2
 
 
 Now, I will be using SQLite to access the database for a dataset called **Simple Folk**.

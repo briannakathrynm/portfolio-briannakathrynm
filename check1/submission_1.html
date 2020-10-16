@@ -212,17 +212,17 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#for-python-level-3-prepare-level-2-and-access-level-3">
-   For Python Level 3, Prepare Level 2, and Access Level 3
+  <a class="reference internal nav-link" href="#access-level-3">
+   Access Level 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prepare-level-2">
+   Prepare Level 2
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#access-level-3">
-     Access Level 3
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#prepare-level-2">
+    <a class="reference internal nav-link" href="#id1">
      Prepare Level 2
     </a>
    </li>
@@ -241,11 +241,9 @@
                 
   <div class="section" id="submission-1">
 <h1>Submission 1<a class="headerlink" href="#submission-1" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="for-python-level-3-prepare-level-2-and-access-level-3">
-<h2>For Python Level 3, Prepare Level 2, and Access Level 3<a class="headerlink" href="#for-python-level-3-prepare-level-2-and-access-level-3" title="Permalink to this headline">¶</a></h2>
-<p>In this section of my portfolio I will be demonstrating skills for the above list. For more demonstration on <strong>Prepare</strong>, please look <span class="xref myst">here</span>.</p>
+<p>In this section of my portfolio I will be demonstrating skills for <strong>python level 3, prepare level 2, and access level 3</strong>. For more demonstration on <strong>prepare</strong>, please look <span class="xref myst">here</span>.</p>
 <div class="section" id="access-level-3">
-<h3>Access Level 3<a class="headerlink" href="#access-level-3" title="Permalink to this headline">¶</a></h3>
+<h2>Access Level 3<a class="headerlink" href="#access-level-3" title="Permalink to this headline">¶</a></h2>
 <p>Access data from both common and uncommon formats and identify best practices for formats in different contexts.</p>
 <p>
 There are many different ways to access data in Pandas, whether you want to read into a more common format such as a CSV file, or if you to access data stored in an HDF5 table or in SAS format. 
@@ -274,6 +272,9 @@ For a contextual example, consider pd.read_sql_table, pd.read_sql_query, and pd.
 <li><p>More for convenience, compatibility for previous methods</p></li>
 <li><p>Takes in parse_dates, columns, chunksize</p></li>
 </ul>
+</div>
+<div class="section" id="prepare-level-2">
+<h2>Prepare Level 2<a class="headerlink" href="#prepare-level-2" title="Permalink to this headline">¶</a></h2>
 <p>Now, I will be using SQLite to access the database for a dataset called <strong>Simple Folk</strong>.</p>
 <p>
 Link to database: http://2016.padjo.org/files/data/starterpack/simplefolks.sqlite
@@ -309,9 +310,8 @@ Link to database: http://2016.padjo.org/files/data/starterpack/simplefolks.sqlit
 </pre></div>
 </div>
 <p>Luckily for us, SQLite databases and their respective tables usually come in a very easy-to-read format. In other cases where the data is not as easy to read in, we need to be able to clean and prepare it.</p>
-</div>
-<div class="section" id="prepare-level-2">
-<h3>Prepare Level 2<a class="headerlink" href="#prepare-level-2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h3>Prepare Level 2<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>Apply data reshaping, cleaning, and filtering as directed.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># First, I&#39;ll load the xls file in and take a look at it uncleaned.</span>
 <span class="n">unclean_table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;tabn039.xls&quot;</span><span class="p">)</span>

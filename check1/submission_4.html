@@ -210,8 +210,18 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#for-summarize-level-3-prepare-level-2-and-visualize-level-3">
-   For Summarize Level 3, Prepare Level 2, and Visualize Level 3
+  <a class="reference internal nav-link" href="#prepare-level-2">
+   Prepare Level 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualize-level-3">
+   Visualize Level 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summarize-level-3">
+   Summarize Level 3
   </a>
  </li>
 </ul>
@@ -227,9 +237,9 @@
                 
   <div class="section" id="submission-4">
 <h1>Submission 4<a class="headerlink" href="#submission-4" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="for-summarize-level-3-prepare-level-2-and-visualize-level-3">
-<h2>For Summarize Level 3, Prepare Level 2, and Visualize Level 3<a class="headerlink" href="#for-summarize-level-3-prepare-level-2-and-visualize-level-3" title="Permalink to this headline">¶</a></h2>
-<p>For this section of my portfolio, I will be correcting <strong>Assignment 4</strong> as well as adding additional graphs and plots to summarize and visualize the data.</p>
+<p>For this section of my portfolio, I will be attempting to earn <strong>summarize level 3, visualize level 3, and prepare level 2</strong>. In this first section, I will be correcting <strong>Assignment 4</strong> as well as adding additional graphs and plots to summarize and visualize the data.</p>
+<div class="section" id="prepare-level-2">
+<h2>Prepare Level 2<a class="headerlink" href="#prepare-level-2" title="Permalink to this headline">¶</a></h2>
 <p>For Assignment 4, I was a bit wary of cleaning and preparing data as it was a new concept for me. As I showed briefly in <em>submission_1</em>, I have gained some knowledge when dealing with cleaning and preparing data. Similarly, I will be using data from the same database as Assignment 4, located <a class="reference external" href="https://nces.ed.gov/programs/digest/d18/tables/dt18_503.20.asp?current=yes">here</a>.</p>
 <p>This table shows the different percentages of college students (16-24 years old) who were employed, how many hours they worked a week, and their level of institution.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imports</span>
@@ -331,6 +341,9 @@ To deal with all of these, I will separate these four different levels into four
 <span class="n">enroll_df</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="visualize-level-3">
+<h2>Visualize Level 3<a class="headerlink" href="#visualize-level-3" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plotting full-time students from total amount</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="n">full_g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">relplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">full_time</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;total&#39;</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s1">&#39;enrollment_status&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;hours_worked&#39;</span><span class="p">)</span>
@@ -342,6 +355,9 @@ To deal with all of these, I will separate these four different levels into four
 <span class="n">part_g</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="summarize-level-3">
+<h2>Summarize Level 3<a class="headerlink" href="#summarize-level-3" title="Permalink to this headline">¶</a></h2>
 <p>Now, I’ll compute some brief summary statistics regarding the data used in this submission.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculating brief summary statistics for full-time students, a subset of the total amount of students</span>
 <span class="n">full_time</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
