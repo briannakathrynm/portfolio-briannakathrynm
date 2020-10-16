@@ -6,6 +6,8 @@
     - file: about/grading
 
 - part: Submission 1
-  chapter 1:
+  chapters:
     - file: submisssion_1_intro
-#     - file: check1/submission_1
+    - file: check1/submission_1
+    - file: check1/submission_2
+    - file: check1/submission_3
