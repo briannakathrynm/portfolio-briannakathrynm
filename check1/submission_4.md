@@ -148,7 +148,7 @@ enroll_df
 ```
 
 ```python
-# Plotting full-time students form total amount
+# Plotting full-time students from total amount
 import seaborn as sns
 full_g = sns.relplot(data=full_time, x='year', y='total', col='enrollment_status', hue='hours_worked')
 full_g.set_xticklabels(rotation=50)

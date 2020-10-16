@@ -20,4 +20,8 @@ jupyter:
 In this section of my portfolio, I will be writing a blog-style post about [this podcast](https://www.youtube.com/watch?v=R6mq5Esjzfw).
 
 
-### Blog Post
+## Blog Post: Philosophy of Data Science
+#### Scientific Reasoning for Practical Data Science with Andrew Gelmen
+
+
+
