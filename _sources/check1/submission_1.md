@@ -14,7 +14,7 @@ jupyter:
 ---
 
 # Submission 1
-In this section of my portfolio I will be demonstrating skills for **python level 3, prepare level 2, construct level 3, and access level 3**. For more demonstration on **prepare**, please look [here](check1/submission_4.md).
+In this section of my portfolio I will be demonstrating skills for **python level 3, prepare level 2, construct level 3, and access level 3**. For more demonstration on **prepare**, please look [here](submission_4.md).
 
 
 ### Access Level 3
