@@ -8,7 +8,7 @@
 - part: Submission 1
   chapters:
     - file: submisssion_1_intro
-    - file: check1/submission_1
-    - file: check1/submission_2
-    - file: check1/submission_3
-    - file: check1/submission_4
+    - file: check1/Chapter_1
+    - file: check1/Chapter_2
+    - file: check1/Chapter_3
+    - file: check1/Chapter_4
