@@ -16,8 +16,8 @@ jupyter:
 # Submission 1 - Chapter 2
 
 
-### Process Level 2
-This blog post is about the podcast **Scientific Reasoning for Practical Data Science with Andrew Gelmen** to earn **process level 2**. The link to the podcast, if you would like to list, is [here](https://www.youtube.com/watch?v=R6mq5Esjzfw).
+### Process Level 3
+This blog post is about the podcast **Scientific Reasoning for Practical Data Science with Andrew Gelmen** to earn **process level 3**. The link to the podcast, if you would like to list, is [here](https://www.youtube.com/watch?v=R6mq5Esjzfw).
 
 
 Today I will be discussing the **Philospohy of Data Science Podcast**. This episode focuses on the practical uses of data science and scientific reasoning, with the overall goal of making key ideas of these topics easier to understand. This episode also has a special guest, **Andrew Gelmen**, who is a Professor of Statistics and Political Science at Columbia University in New York. He has worked on numeruous amounts of projects in applied data science as well as other applications in statistics. Recently, he has several books for linear regression and classification as well
