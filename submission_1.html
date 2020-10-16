@@ -184,9 +184,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/submission_1.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/submission_1.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -204,36 +204,27 @@
 
         <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/submission_1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
     </div>
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#access-level-3">
-   Access Level 3
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prepare-level-2">
-   Prepare Level 2
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Prepare Level 2
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-        </nav>
         
     </div>
 </div>
@@ -244,125 +235,13 @@
                 
   <div class="section" id="submission-1">
 <h1>Submission 1<a class="headerlink" href="#submission-1" title="Permalink to this headline">¶</a></h1>
-<p>In this section of my portfolio I will be demonstrating skills for <strong>python level 3, prepare level 2, and access level 3</strong>. For more demonstration on <strong>prepare</strong>, please look <a class="reference internal" href="check1/submission_4.html"><span class="doc std std-doc">here</span></a>.</p>
-<div class="section" id="access-level-3">
-<h2>Access Level 3<a class="headerlink" href="#access-level-3" title="Permalink to this headline">¶</a></h2>
-<p>Access data from both common and uncommon formats and identify best practices for formats in different contexts.</p>
-<p>
-There are many different ways to access data in Pandas, whether you want to read into a more common format such as a CSV file, or if you to access data stored in an HDF5 table or in SAS format. 
-</p>
-<p> 
-When considering which format to use, you should also note the different types of separators that are the defaults of each method. For example, pd.read_csv defaults separation to a comma, while pd.read_table defaults to'\t'. Different file types also come with different parameters (whether optional or required) according to their designated Pandas function. 
-</p>
-<p>
-For a contextual example, consider pd.read_sql_table, pd.read_sql_query, and pd.read_sql. Although these functions seem very similar to each other, there are actually quite a few key differences. The list below describes each method and how you can use them.
-</p>
-<p><strong>pd.read_sql_table</strong></p>
-<ul class="simple">
-<li><p>Reads an SQL database table into a DataFrame</p></li>
-<li><p>Takes in parse_dates, columns, chunksize</p></li>
-<li><p>Does not support DBAPI connections</p></li>
-</ul>
-<p><strong>pd.read_sql_query</strong></p>
-<ul class="simple">
-<li><p>Reads an SQL query into a DataFrame</p></li>
-<li><p>Takes in parse_dates, chunksize</p></li>
-<li><p>May support DBAPI connections depending on type</p></li>
-</ul>
-<p><strong>pd.read_sql</strong></p>
-<ul class="simple">
-<li><p>Read SQL query or database table into a DataFrame</p></li>
-<li><p>More for convenience, compatibility for previous methods</p></li>
-<li><p>Takes in parse_dates, columns, chunksize</p></li>
-</ul>
-</div>
-<div class="section" id="prepare-level-2">
-<h2>Prepare Level 2<a class="headerlink" href="#prepare-level-2" title="Permalink to this headline">¶</a></h2>
-<p>Now, I will be using SQLite to access the database for a dataset called <strong>Simple Folk</strong>.</p>
-<p>
-Link to database: http://2016.padjo.org/files/data/starterpack/simplefolks.sqlite
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">con</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;simplefolks.sqlite&#39;</span><span class="p">)</span>
-<span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># DataFrame with the age, sex, and name of individuals</span>
-<span class="n">people_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT age, sex, name FROM people&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-<span class="c1"># DataFrame with pets, pet owners, and pet names</span>
-<span class="n">pet_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT name, owner_name FROM pets ORDER BY name&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Viewing DataFrames</span>
-<span class="n">people_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Viewing DataFrames</span>
-<span class="n">pet_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>Now, let’s say we wanted to list all of the 30 year old and older men in the people table. We can do this by implementing the query below.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">query_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM people WHERE sex = &#39;M&#39; AND age &gt;= 30&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-<span class="n">query_1</span>
-</pre></div>
-</div>
-<p>Or, with the pet table we can find the pets name and type that are not dogs or cats. Personally, the bird named Harambe is my favorite.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">query_2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT name, type FROM pets WHERE type != &#39;cat&#39; and TYPE != &#39;dog&#39;&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-<span class="n">query_2</span>
-</pre></div>
-</div>
-<p>Luckily for us, SQLite databases and their respective tables usually come in a very easy-to-read format. In other cases where the data is not as easy to read in, we need to be able to clean and prepare it.</p>
-<div class="section" id="id1">
-<h3>Prepare Level 2<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>Apply data reshaping, cleaning, and filtering as directed.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># First, I&#39;ll load the xls file in and take a look at it uncleaned.</span>
-<span class="n">unclean_table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;tabn039.xls&quot;</span><span class="p">)</span>
-<span class="n">unclean_table</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>Obviously, this table needs some major cleaning. Although I am only showing the head of the table above, there are actually plenty of rows towards the end (rows 42-45) that are filled with NaN values. Our first task will be to <strong>drop and rename</strong> columns and rows.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">clean_table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;tabn039.xls&quot;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">clean_table</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This will get rid of leadings rows, as well as NaN rows towards the bottom</span>
-<span class="n">clean_table</span> <span class="o">=</span> <span class="n">clean_table</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">41</span><span class="p">]</span>
-<span class="n">clean_table</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Changing row and column names to appropriate names</span>
-<span class="n">clean_table</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">lower</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">clean_table</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">lower</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s1">&#39;columns&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="c1"># Deleting whitespaces and trailing periods</span>
-<span class="n">clean_table</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">clean_table</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-<span class="n">clean_table</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">clean_table</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="s1">&#39;_&#39;</span><span class="p">)</span>
-<span class="n">clean_table</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">clean_table</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)</span>
-<span class="n">clean_table</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">clean_table</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)</span>
-<span class="n">clean_table</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">clean_table</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="s1">&#39;_&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">clean_table</span>
-</pre></div>
-</div>
-<p>Now, our rows and columns look pretty good. However, we have a couple of different tables combined into one table (cleaned_table). Below, I will attempt to split these into <strong>2 different tables</strong>.</p>
-<p>This table shows the <strong>Enrollment in Schools, in Thousands</strong>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># First table</span>
-<span class="n">df1</span> <span class="o">=</span> <span class="n">clean_table</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">19</span><span class="p">]</span>
-<span class="n">df1</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">set_caption</span><span class="p">(</span><span class="s2">&quot;Enrollment in Schools, in Thousands&quot;</span><span class="p">)</span>
-<span class="n">df1</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="n">df1</span>
-</pre></div>
-</div>
-<p>This table shows the <strong>Percent Distribution in Enrollment in Schools</strong>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Second table</span>
-<span class="n">df2</span> <span class="o">=</span> <span class="n">clean_table</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">20</span><span class="p">:]</span>
-<span class="n">df2</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="n">df2</span>
-</pre></div>
-</div>
-</div>
-</div>
+<p>I’ve demonstrated skills <em>python</em>, <em>access</em>, <em>construct</em>, and <em>prepare</em> in chapter 1. This file can be found <a class="reference internal" href="check1/Chapter_1.html"><span class="doc std std-doc">here</span></a>.
+<br>
+I’ve demonstrated skill <em>process</em> in chapter 2. The file can be found <a class="reference internal" href="check1/Chapter_2.html"><span class="doc std std-doc">here</span></a>.
+<br>
+I’ve demonstrated skills <em>summarize</em> and <em>visualize</em> in chapter 3. The file can be found <a class="reference internal" href="check1/Chapter_3.html"><span class="doc std std-doc">here</span></a>.
+<br>
+I’ve demonstrated skills <em>prepare</em>, <em>summarize</em>, and <em>visualize</em> in chapter 4. The file can be found <a class="reference internal" href="check1/Chapter_4.html"><span class="doc std std-doc">here</span></a>.</p>
 </div>
 
     <script type="text/x-thebe-config">

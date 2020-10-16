@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Submission 4 &#8212; CSC 310 Portfolio</title>
+    <title>&lt;no title&gt; &#8212; CSC 310 Portfolio</title>
     
   <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -184,9 +184,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/submission_4.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/submission_4.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -204,6 +204,23 @@
 
         <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/submission_4.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
     </div>
 
     <!-- Table of contents -->
@@ -213,22 +230,7 @@
             <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prepare-level-2">
-   Prepare Level 2
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#visualize-level-3">
-   Visualize Level 3
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summarize-level-3">
-   Summarize Level 3
-  </a>
- </li>
+            <ul class="simple nav section-nav flex-column">
 </ul>
 
         </nav>
@@ -240,139 +242,11 @@
         
               <div>
                 
-  <div class="section" id="submission-4">
-<h1>Submission 4<a class="headerlink" href="#submission-4" title="Permalink to this headline">¶</a></h1>
-<p>For this section of my portfolio, I will be attempting to earn <strong>summarize level 3, visualize level 3, and prepare level 2</strong>. In this first section, I will be correcting <strong>Assignment 4</strong> as well as adding additional graphs and plots to summarize and visualize the data.</p>
-<div class="section" id="prepare-level-2">
-<h2>Prepare Level 2<a class="headerlink" href="#prepare-level-2" title="Permalink to this headline">¶</a></h2>
-<p>For Assignment 4, I was a bit wary of cleaning and preparing data as it was a new concept for me. As I showed briefly in <em>submission_1</em>, I have gained some knowledge when dealing with cleaning and preparing data. Similarly, I will be using data from the same database as Assignment 4, located <a class="reference external" href="https://nces.ed.gov/programs/digest/d18/tables/dt18_503.20.asp?current=yes">here</a>.</p>
-<p>This table shows the different percentages of college students (16-24 years old) who were employed, how many hours they worked a week, and their level of institution.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imports</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Some Code Here</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># First, let&#39;s take a look at what we are dealing with</span>
-<span class="n">enroll_uc_table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;tabn503.20.xls&quot;</span><span class="p">)</span>
-<span class="n">enroll_uc_table</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">enroll_uc_table</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>As we can see from just the table above, the data is quite messy. There are multiply NaN values, headers in the wrong place, as well as trailing characters. Through this submission, I will correct these errors.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">enroll_clean</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;tabn503.20.xls&#39;</span><span class="p">,</span> <span class="n">skipfooter</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)),</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">enroll_clean</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Control and level of institution and year&#39;</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="c1"># enroll_clean = enroll_clean.iloc[2:,]</span>
-<span class="n">enroll_clean</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">enroll_clean</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Map years by removing trailing periods</span>
-<span class="n">year_mapper</span> <span class="o">=</span> <span class="p">{</span><span class="n">yr</span><span class="p">:</span> <span class="n">yr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">yr</span> <span class="ow">in</span> <span class="n">enroll_clean</span><span class="o">.</span><span class="n">index</span><span class="p">}</span>
-<span class="n">year_mapper</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">enroll_clean</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">year_mapper</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">enroll_clean</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>In this table, we also have to take into account the different levels of students. In this table, we have <strong>4 levels of institutions</strong>. The first is the <strong>total</strong>, the second is <strong>public 4-year institutions</strong>, <strong>private 4-year institutions</strong>, and finally <strong>public 2-year institutions</strong>.</p>
-<p>
-To deal with all of these, I will separate these four different levels into four different tables, as well as having different tables for full-time and part-time students.
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Total, all institutions table</span>
-<span class="n">total_df</span> <span class="o">=</span> <span class="n">enroll_clean</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">32</span><span class="p">]</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Public 4-year institutions table</span>
-<span class="n">public_four_df</span> <span class="o">=</span> <span class="n">enroll_clean</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">32</span><span class="p">:</span><span class="mi">43</span><span class="p">]</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Private 4-year institutions</span>
-<span class="n">priv_4_df</span> <span class="o">=</span> <span class="n">enroll_clean</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">43</span><span class="p">:</span><span class="mi">49</span><span class="p">]</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Public 2-year institutions</span>
-<span class="n">public_2_df</span> <span class="o">=</span> <span class="n">enroll_clean</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">49</span><span class="p">:]</span>
-</pre></div>
-</div>
-<p>Now, I’m going to split the <strong>total</strong> table into two different dataframes. The first one will be for <strong>full-time students</strong>, while the second one will be for <strong>part-time students</strong>. This will make the overall table much cleaner.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Making full-time dataframe</span>
-<span class="n">full_cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">total_df</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="p">(</span><span class="s1">&#39;Unnamed&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;Part-time students&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-            <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;Less than 20 hours .1&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;Less than 20 hours .2&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
-            <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;20 to 34 hours .1&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;20 to 34 hours .2&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
-            <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;35 or more hours .1&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;35 or more hours .2&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="p">[</span><span class="mi">2</span><span class="p">])]</span>
-<span class="n">full_time</span> <span class="o">=</span> <span class="n">total_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">full_cols</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Making part-time dataframe</span>
-<span class="n">part_cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">total_df</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="p">(</span><span class="s1">&#39;Unnamed&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;Full-time students&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-            <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;Less than   20 hours .1&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;Less than   20 hours .2&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
-            <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;20 to 34 hours .1&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;20 to 34 hours .2&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
-            <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;35 or more hours .1&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;35 or more hours .2&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="p">[</span><span class="mi">2</span><span class="p">])]</span>
-<span class="n">part_time</span> <span class="o">=</span> <span class="n">total_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">part_cols</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Viewing dataframes</span>
-<span class="n">full_time</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">part_time</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>Now, we will apply more formatting to the above dataframes to make them cleaner and more readable, also following column name guidelines.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Full-time students dataframe</span>
-<span class="n">full_time</span> <span class="o">=</span> <span class="n">full_time</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;level_1&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">full_time</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;level_0&#39;</span><span class="p">:</span><span class="s1">&#39;enrollment_status&#39;</span><span class="p">,</span>
-                            <span class="s1">&#39;level_2&#39;</span><span class="p">:</span><span class="s1">&#39;hours_worked&#39;</span><span class="p">,</span>
-                            <span class="s1">&#39;Control and level of institution and year&#39;</span><span class="p">:</span><span class="s1">&#39;year&#39;</span><span class="p">,</span>
-                           <span class="mi">0</span><span class="p">:</span><span class="s1">&#39;total&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">full_time</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Part-time students dataframe</span>
-<span class="n">part_time</span> <span class="o">=</span> <span class="n">part_time</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;level_1&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">part_time</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;level_0&#39;</span><span class="p">:</span><span class="s1">&#39;enrollment_status&#39;</span><span class="p">,</span>
-                            <span class="s1">&#39;level_2&#39;</span><span class="p">:</span><span class="s1">&#39;hours_worked&#39;</span><span class="p">,</span>
-                            <span class="s1">&#39;Control and level of institution and year&#39;</span><span class="p">:</span><span class="s1">&#39;year&#39;</span><span class="p">,</span>
-                           <span class="mi">0</span><span class="p">:</span><span class="s1">&#39;total&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">part_time</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>Now the above tables are much cleaner. To visualize them better, I will develop some plots that will visualize the hours worked in total across full-time and part-time students.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># First, concat the two tables together to form the total table</span>
-<span class="n">enroll_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">full_time</span><span class="p">,</span> <span class="n">part_time</span><span class="p">])</span>
-<span class="n">enroll_df</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="visualize-level-3">
-<h2>Visualize Level 3<a class="headerlink" href="#visualize-level-3" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plotting full-time students from total amount</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="n">full_g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">relplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">full_time</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;total&#39;</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s1">&#39;enrollment_status&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;hours_worked&#39;</span><span class="p">)</span>
-<span class="n">full_g</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plotting part-time students from total amount</span>
-<span class="n">part_g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">relplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">part_time</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;total&#39;</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s1">&#39;enrollment_status&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;hours_worked&#39;</span><span class="p">)</span>
-<span class="n">part_g</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="summarize-level-3">
-<h2>Summarize Level 3<a class="headerlink" href="#summarize-level-3" title="Permalink to this headline">¶</a></h2>
-<p>Now, I’ll compute some brief summary statistics regarding the data used in this submission.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculating brief summary statistics for full-time students, a subset of the total amount of students</span>
-<span class="n">full_time</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculating various statistics for part-time students, a subset from the total amount of students</span>
-<span class="n">part_time</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;total&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;sum&#39;</span><span class="p">,</span> <span class="s1">&#39;min&#39;</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">]})</span>
-</pre></div>
-</div>
-<p>The above summary statistic shows the <strong>sum of the total hours</strong> worked for part-time students, the <strong>minimum number of hours</strong> worked by part-time students, and the <strong>maximum number of hours</strong> worked by a part-time student.</p>
 </div>
 </div>
 
