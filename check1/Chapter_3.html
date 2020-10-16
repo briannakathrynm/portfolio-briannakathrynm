@@ -216,6 +216,30 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summarize-level-3">
+   Summarize Level 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualize-level-3">
+   Visualize Level 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#construct-level-3">
+   Construct Level 3
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -225,9 +249,133 @@
                 
   <div class="section" id="submission-1-chapter-3">
 <h1>Submission 1 - Chapter 3<a class="headerlink" href="#submission-1-chapter-3" title="Permalink to this headline">¶</a></h1>
-<p>In this submission, I will be attempting to earn <strong>summarize level 3</strong> and <strong>visualize level 3</strong>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">### Some code here</span>
+<p>In this submission, I will be attempting to earn <strong>summarize level 3</strong>, <strong>construct level 3</strong>, and <strong>visualize level 3</strong>.</p>
+<p>Back in <a class="reference internal" href="Chapter_1.html"><span class="doc std std-doc">this chapter</span></a>, I briefly explored the <span class="xref myst">simple folk database</span>. In this Chapter, I plan on diving deeper and creating more tables, as well as visualizing and summarizing data by those created tables.</p>
+<div class="section" id="summarize-level-3">
+<h2>Summarize Level 3<a class="headerlink" href="#summarize-level-3" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Imports and data loading</span>
+<span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;simplefolks.sqlite&#39;</span><span class="p">)</span>
+<span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 </pre></div>
+</div>
+<p>This database contains 5 different tables of a simple town. It has information on the town’s <strong>people, homes, their pets, politicians, and prison inmates</strong>. Back in Chapter 1, I constructed a couple of tables to show the people and pets of this town, as well as constructing other tables based on simple calculations. In this chapter, I will construct more tables as well as creating new tables based on calculations.</p>
+<p>First, lets start with something simple. In this first table, I will find information about the females of this town, and statistics about their age.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># First query</span>
+<span class="n">query_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM people WHERE sex = &#39;F&#39;&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+<span class="n">query_1</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculating summary statistics of first query</span>
+<span class="n">query_1</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Now, the above calculation is quite simple. It just tells us the various summary statistics about ALL women in the town, with no other factors. Now, I will create a table with different attributes to create a subset of this first table.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creating subset of data from first query</span>
+<span class="n">subset_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM people WHERE sex = &#39;F&#39; AND age &gt;= 35 ORDER BY age DESC&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+<span class="n">subset_1</span>
+</pre></div>
+</div>
+<p>The above table describes women in the town whose age is above 35 (close to the mean of the data), with their age in decreases order. This once again is a simple table, but next I will dive into some more complex calculations.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Second query</span>
+<span class="n">query_2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM homes&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+<span class="n">query_2</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculating summary statistics for above data</span>
+<span class="n">query_2</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This table shows us the homes in the town, who they are owned by, the area they are located in, and the value of the home. The next subset will show us the <strong>three cheapest</strong> homes in all of the different areas.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Subset for urban houses</span>
+<span class="n">subset_urban</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM homes WHERE area = &#39;urban&#39; ORDER BY value ASC LIMIT 3&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+<span class="c1"># Subset for country houses</span>
+<span class="n">subset_country</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM homes WHERE area = &#39;country&#39; ORDER BY value ASC LIMIT 3&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+<span class="c1"># Subset for suburb houses</span>
+<span class="n">subset_suburbs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM homes WHERE area = &#39;suburbs&#39; ORDER BY value ASC LIMIT 3&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculating summary statistics for urban subset</span>
+<span class="n">subset_urban</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculating summary statistics for country subset</span>
+<span class="n">subset_country</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculating summary statistics for suburb subset</span>
+<span class="n">subset_suburbs</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Based on the summary statistics above, we can see that among the 3 least expensive homes, the minimum value from all the different areas would be in the <strong>country subset</strong> at 42,000. The maximum value from the three least expensive homes at all of the areas would be from the <strong>urban subset</strong> at 190,000. From this data, we can see that the most expensive homes (even from listing the three <em>least expensive</em> homes) would be from the <strong>suburb subset</strong> with a minimum of 95,000, and std of 37,527, and a maximum of 160,000.</p>
+<p>Now that we are getting more specific, lets list the <strong>3 most expensive homes</strong> that are <strong>not in an urban area</strong> and <strong>not owned by Donald</strong>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Third subset</span>
+<span class="n">subset_3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM homes WHERE area != &#39;urban&#39; AND owner_name != &#39;Donald&#39; ORDER BY value ASC&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+<span class="n">subset_3</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="visualize-level-3">
+<h2>Visualize Level 3<a class="headerlink" href="#visualize-level-3" title="Permalink to this headline">¶</a></h2>
+<p>Now, let’s take the housing data, and create different visuals and plots based on the price, location, and owner.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imports</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+<p>Showing how many houses are owned by each person.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">chart_1</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;owner_name&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;count&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;ch:.25&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">query_2</span><span class="p">)</span>
+<span class="n">chart_1</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Showing the different values of homes in different areas, note the outliers.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">chart_2</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;area&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;box&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;ch:.25&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">query_2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Showing different homes owned by people and their corresponding values and areas.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">chart_3</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;owner_name&quot;</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">&quot;area&quot;</span><span class="p">,</span>
+                <span class="n">data</span><span class="o">=</span><span class="n">query_2</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;swarm&quot;</span><span class="p">,</span>
+                <span class="n">height</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=.</span><span class="mi">7</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;ch:.25&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="construct-level-3">
+<h2>Construct Level 3<a class="headerlink" href="#construct-level-3" title="Permalink to this headline">¶</a></h2>
+<p>In this section I will construct some data tables using data that is not automatically aligned.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Loading data</span>
+<span class="n">friends</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;friends.xlsx&quot;</span><span class="p">)</span>
+<span class="n">friends_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;friends_1.xlsx&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Look at first file</span>
+<span class="n">friends</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Look at second file</span>
+<span class="n">friends_1</span>
+</pre></div>
+</div>
+<p>As we can see above, the two datasets are not the same. The first dataset has 7 rows and 5 columns, whereas the second dataset has 5 rows and 4 columns.</p>
+<p>The key here is to look for similar column names to merge on, even if the data is not aligned. I will do this below.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># First merge</span>
+<span class="n">merge_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span> <span class="o">=</span> <span class="n">friends</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">friends_1</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;sport&#39;</span><span class="p">,</span> <span class="s1">&#39;birthday_month&#39;</span><span class="p">])</span>
+<span class="n">merge_1</span>
+</pre></div>
+</div>
+<p>As we can see, we have some missing NaN values in the additional column that was included in the first dataset <strong>friends</strong>. However, we can fill these missing values using the <strong>mode</strong>, or most common occurence of the other values for <strong>favorite_color</strong>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">friends</span><span class="o">.</span><span class="n">favorite_color</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>As we can see from the code above, the mode for <strong>favorite_color</strong> in the friends dataset is Orange. Now, we can fill the missing values with these occurences.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;favorite_color&#39;</span><span class="p">]:</span>
+    <span class="n">merge_1</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">merge_1</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">merge_1</span>
+</pre></div>
+</div>
 </div>
 </div>
 
