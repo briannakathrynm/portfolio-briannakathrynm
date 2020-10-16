@@ -14,7 +14,7 @@ jupyter:
 ---
 
 # Submission 3
-#### For Summarize Level 3 and Visualize Level 3
+In this submission, I will be attempting to earn **summarize level 3** and **visualize level 3**.
 
 ```python
 ### Some code here

@@ -14,10 +14,12 @@ jupyter:
 ---
 
 # Submission 4
-#### For Summarize Level 3, Prepare Level 2, and Visualize Level 3
 
 
-For this section of my portfolio, I will be correcting **Assignment 4** as well as adding additional graphs and plots to summarize and visualize the data.
+For this section of my portfolio, I will be attempting to earn **summarize level 3, visualize level 3, and prepare level 2**. In this first section, I will be correcting **Assignment 4** as well as adding additional graphs and plots to summarize and visualize the data.
+
+
+### Prepare Level 2
 
 
 For Assignment 4, I was a bit wary of cleaning and preparing data as it was a new concept for me. As I showed briefly in *submission_1*, I have gained some knowledge when dealing with cleaning and preparing data. Similarly, I will be using data from the same database as Assignment 4, located [here](https://nces.ed.gov/programs/digest/d18/tables/dt18_503.20.asp?current=yes).
@@ -147,6 +149,8 @@ enroll_df = pd.concat([full_time, part_time])
 enroll_df
 ```
 
+### Visualize Level 3
+
 ```python
 # Plotting full-time students from total amount
 import seaborn as sns
@@ -159,6 +163,9 @@ full_g.set_xticklabels(rotation=50)
 part_g = sns.relplot(data=part_time, x='year', y='total', col='enrollment_status', hue='hours_worked')
 part_g.set_xticklabels(rotation=50)
 ```
+
+### Summarize Level 3
+
 
 Now, I'll compute some brief summary statistics regarding the data used in this submission.
 
