@@ -1,3 +1,3 @@
 # Portfolio Check 3
 
-I've demonstrated skill x in chapter y.
+Code for Portfolio Check 3 Here

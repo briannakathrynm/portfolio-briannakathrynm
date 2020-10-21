@@ -5,3 +5,4 @@ pyppeteer
 pandas
 seaborn
 jupytext
+xlrd

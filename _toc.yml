@@ -5,8 +5,10 @@
     - file: about/index
     - file: about/grading
 
-# - part: Submission 1
-#   chapters:
-#     - file: submission_1_intro
-#     - file: check1/
-#     - file: check1/
+- part: Submission 1
+  chapters:
+    - file: submission_1_intro
+    - file: check1/Chapter_1
+    - file: check1/Chapter_2
+    - file: check1/Chapter_3
+    - file: check1/Chapter_4

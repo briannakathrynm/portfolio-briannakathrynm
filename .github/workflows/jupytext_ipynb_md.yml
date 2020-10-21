@@ -31,7 +31,8 @@ jobs:
 
     - name: convert
       run: |
-          jupytext */*.ipynb --to myst
+          jupytext --set-formats ipynb,md */*.ipynb  # Turn .ipynb into a paired ipynb/py notebook
+          jupytext --sync */*.ipynb                  # Update whichever of .ipynb/notebook.md is outdated
 
     - uses: EndBug/add-and-commit@v4 # You can change this to use a specific version
       with:
