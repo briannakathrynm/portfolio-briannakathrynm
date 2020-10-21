@@ -5,3 +5,5 @@ logo: logo.png
 
 
 exclude_patterns            : ['data/*',  README.md, template_files/*]  #
+execute:
+  execute_notebooks         : force
