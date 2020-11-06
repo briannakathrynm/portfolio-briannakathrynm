@@ -13,6 +13,20 @@ jupyter:
     name: python3
 ---
 
-```python
-### Some code here
-```
+# Chapter 4
+I've demonstrated skills *clustering*, *evaluate*, and *regression* in this chapter.
+
+
+**Clustering**
+<br>
+Apply multiple clustering techniques, and interpret results
+
+
+**Evaluate**
+<br>
+Evaluate a model with multiple metrics and cross validation
+
+
+**Regression**
+<br>
+Can fit and explain nonlinear regression
