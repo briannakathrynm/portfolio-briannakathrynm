@@ -13,6 +13,10 @@ jupyter:
     name: python3
 ---
 
-```python
-### Some code here
-```
+# Chapter 2
+I've demonstrated skill *classification* in this chapter.
+
+
+**Classification**
+<br>
+Fit and apply classification models and select appropriate classification models for different contexts
