@@ -14,7 +14,7 @@ jupyter:
 ---
 
 # Chapter 2
-I've demonstrated classification level 3 and clustering level 3 in this chapter.
+I've demonstrated **classification level 3**, **evaluate level 2 (and 3, if applicable)** and **clustering level 3** in this chapter.
 
 
 **Classification**
@@ -25,6 +25,13 @@ Fit and apply classification models and select appropriate classification models
 **Clustering**
 <br>
 Apply multiple clustering techniques, and interpret results
+
+
+**Evaluate**
+<br>
+Level 2: Apply basic model evaluation metrics to a held out test set
+<br>
+Level 3: Evaluate a model with multiple metrics and cross validation
 
 
 In this chapter I will be looking at the same dataset I explored in *Assignment #9* previously. I'll include some of the same EDA and methods as well.
@@ -308,4 +315,54 @@ result = pd.merge(left = result1, right = metrics3, how='inner', on=["metric"])
 result.rename(columns={"score_x":"K-means", "score_y":"Mean Shift", "score":"Agglomerative Clustering"})
 ```
 
-From the above table, we can see that **K-Means Clustering** had an overall better silhouette score, **Mean Shift** had a better **Mutual Info** score, and **Agg. Clustering** had a better **Rand Score**.
+From the above table, we can see that **K-Means Clustering** had an overall better silhouette score, **Mean Shift** had a better **Mutual Info** score, and **Agg. Clustering** had a better **Rand Score**. 
+
+
+## Evaluate Level 2/3
+
+
+You can see from the multiple metrics I used throughout this portion (both in the clustering and classification sections) that this warrants **evaluate level 2** for applying basic model evaluation metrics, and *part* of **level 3** for using multiple metrics with multiple different types of classifiers.
+
+
+## Evaluate Level 3
+
+
+I will now perform some cross-validation for the **Iris Dataset** shown in class, along with using different train and test sizes for the data.
+
+```python
+# Loading data
+iris_df = pd.read_csv('Iris.csv')
+```
+
+```python
+# Brief visualization
+sns.pairplot(iris_df, hue='Species', palette="flare")
+```
+
+```python
+# Target and feature variables
+X = iris_df[['SepalLengthCm', 'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm']].values
+y = iris_df['Species'].values
+```
+
+```python
+# Using a loop to change test sizes, correction from previous assignments!
+from sklearn.metrics import accuracy_score
+testsize_range = [n/10 for n in range(1,7)]
+testsize_scores = []
+dt = DecisionTreeClassifier()
+for testsize in testsize_range:
+    X_train, X_test, y_train, y_test = train_test_split(X,y, test_size = testsize, random_state=0)
+    dt.fit(X_train, y_train)
+    y_pred = dt.predict(X_test)
+    scores = (accuracy_score(y_test, y_pred))
+    testsize_scores.append(scores.mean())
+```
+
+```python
+final_results = pd.DataFrame({'test_size': ["0.1","0.2","0.3", "0.4", "0.5", "0.6"],
+                           'score': testsize_scores})
+final_results
+```
+
+As we can see, it seems that a **test_size of 0.3 seems to work best for the Iris dataset**. Accurracys of 1 might mean that the dataset is too overfit, or it might be overtrained.

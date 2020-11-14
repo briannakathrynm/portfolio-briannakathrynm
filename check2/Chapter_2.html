@@ -253,6 +253,16 @@
    Clustering Level 3
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#evaluate-level-2-3">
+   Evaluate Level 2/3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#evaluate-level-3">
+   Evaluate Level 3
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -266,13 +276,18 @@
                 
   <div class="section" id="chapter-2">
 <h1>Chapter 2<a class="headerlink" href="#chapter-2" title="Permalink to this headline">¶</a></h1>
-<p>I’ve demonstrated classification level 3 and clustering level 3 in this chapter.</p>
+<p>I’ve demonstrated <strong>classification level 3</strong>, <strong>evaluate level 2 (and 3, if applicable)</strong> and <strong>clustering level 3</strong> in this chapter.</p>
 <p><strong>Classification</strong>
 <br>
 Fit and apply classification models and select appropriate classification models for different contexts</p>
 <p><strong>Clustering</strong>
 <br>
 Apply multiple clustering techniques, and interpret results</p>
+<p><strong>Evaluate</strong>
+<br>
+Level 2: Apply basic model evaluation metrics to a held out test set
+<br>
+Level 3: Evaluate a model with multiple metrics and cross validation</p>
 <p>In this chapter I will be looking at the same dataset I explored in <em>Assignment #9</em> previously. I’ll include some of the same EDA and methods as well.</p>
 <div class="section" id="classification-level-3">
 <h2>Classification Level 3<a class="headerlink" href="#classification-level-3" title="Permalink to this headline">¶</a></h2>
@@ -500,6 +515,46 @@ I previously used KMeans for clustering in <em>Assignment #9</em>, so I’ll bri
 </pre></div>
 </div>
 <p>From the above table, we can see that <strong>K-Means Clustering</strong> had an overall better silhouette score, <strong>Mean Shift</strong> had a better <strong>Mutual Info</strong> score, and <strong>Agg. Clustering</strong> had a better <strong>Rand Score</strong>.</p>
+</div>
+<div class="section" id="evaluate-level-2-3">
+<h2>Evaluate Level 2/3<a class="headerlink" href="#evaluate-level-2-3" title="Permalink to this headline">¶</a></h2>
+<p>You can see from the multiple metrics I used throughout this portion (both in the clustering and classification sections) that this warrants <strong>evaluate level 2</strong> for applying basic model evaluation metrics, and <em>part</em> of <strong>level 3</strong> for using multiple metrics with multiple different types of classifiers.</p>
+</div>
+<div class="section" id="evaluate-level-3">
+<h2>Evaluate Level 3<a class="headerlink" href="#evaluate-level-3" title="Permalink to this headline">¶</a></h2>
+<p>I will now perform some cross-validation for the <strong>Iris Dataset</strong> shown in class, along with using different train and test sizes for the data.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Loading data</span>
+<span class="n">iris_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Iris.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Brief visualization</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">iris_df</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Species&#39;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;flare&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Target and feature variables</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">iris_df</span><span class="p">[[</span><span class="s1">&#39;SepalLengthCm&#39;</span><span class="p">,</span> <span class="s1">&#39;SepalWidthCm&#39;</span><span class="p">,</span> <span class="s1">&#39;PetalLengthCm&#39;</span><span class="p">,</span> <span class="s1">&#39;PetalWidthCm&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">iris_df</span><span class="p">[</span><span class="s1">&#39;Species&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using a loop to change test sizes, correction from previous assignments!</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="n">testsize_range</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span><span class="o">/</span><span class="mi">10</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">)]</span>
+<span class="n">testsize_scores</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">testsize</span> <span class="ow">in</span> <span class="n">testsize_range</span><span class="p">:</span>
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="n">testsize</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">dt</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+    <span class="n">scores</span> <span class="o">=</span> <span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+    <span class="n">testsize_scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">scores</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">final_results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;test_size&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;0.1&quot;</span><span class="p">,</span><span class="s2">&quot;0.2&quot;</span><span class="p">,</span><span class="s2">&quot;0.3&quot;</span><span class="p">,</span> <span class="s2">&quot;0.4&quot;</span><span class="p">,</span> <span class="s2">&quot;0.5&quot;</span><span class="p">,</span> <span class="s2">&quot;0.6&quot;</span><span class="p">],</span>
+                           <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="n">testsize_scores</span><span class="p">})</span>
+<span class="n">final_results</span>
+</pre></div>
+</div>
+<p>As we can see, it seems that a <strong>test_size of 0.3 seems to work best for the Iris dataset</strong>. Accurracys of 1 might mean that the dataset is too overfit, or it might be overtrained.</p>
 </div>
 </div>
 
