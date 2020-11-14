@@ -13,7 +13,7 @@ jupyter:
     name: python3
 ---
 
-# Chapter 2
+#  Submission 2 - Chapter 2
 I've demonstrated **classification level 3**, **evaluate level 2 (and 3, if applicable)** and **clustering level 3** in this chapter.
 
 
