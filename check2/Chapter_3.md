@@ -13,6 +13,15 @@ jupyter:
     name: python3
 ---
 
-```python
-### Some code here
-```
+# Chapter 3
+I've demonstrated skills *evaluate* and *process* in this chapter.
+
+
+**Evaluate**
+<br>
+Evaluate a model with multiple metrics and cross validation
+
+
+**Process**
+<br>
+Compare different ways that data science can facilitate decision making
