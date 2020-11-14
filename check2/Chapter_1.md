@@ -13,21 +13,16 @@ jupyter:
     name: python3
 ---
 
-# Submission 2
-I've demonstrated skills *clustering* and *regression* in this chapter.
+# Chapter 1
+I've demonstrated level 3 for regression in this chapter.
 
 
-**Regression**
+**Regression Level 3**
 <br>
 Can fit and explain nonlinear regression
 
 
-**Clustering**
-<br>
-Apply multiple clustering techniques, and interpret results
-
-
-## Regression
+## Regression Level 3
 
 ```python
 # Imports
@@ -192,10 +187,3 @@ rmse
 ```
 
 By using this new model, our R2 score increased from **0.4564966485656323** with the Linear Regression model, to **0.4628233152699195** with the Polynomial Regression model.
-
-
-## Clustering
-
-```python
-
-```
