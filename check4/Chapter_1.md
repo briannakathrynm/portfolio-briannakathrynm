@@ -14,7 +14,12 @@ jupyter:
 ---
 
 #  Submission 4 - Chapter 1
-I've demonstrated **clustering level 3**, **evaluate level 3**, **compare level 2 and 3**, and **optimize level 3** in this chapter. 
+I've demonstrated **workflow level 3**, **clustering level 3**, **evaluate level 3**, **compare level 2 and 3**, and **optimize level 3** in this chapter. 
+
+
+**Workflow Level 3**
+<br>
+Scope, choose an appropriate tool pipeline and solve data science problems, describe strengths and weakensses of common tools.
 
 
 **Clustering Level 3**
@@ -41,6 +46,64 @@ Evaluate tradeoffs between different model comparison types.
 **Optimize Level 3**
 <br>
 Select optimal parameters based of mutiple quantitative criteria and automate parameter tuning.
+
+
+## Workflow Level 3
+For this section, I will go over my process for the next section (which involves clustering and other skills). I will also go over what I want to achieve using these models, and other tools that could also be used to replace what I am using.
+
+**Common Tools in Data Science**
+<br>
+There are many different tools that can be used and applied in data science (whether for machine learning purposes, or just statistical). I will list some of these tools that I have personally used before below:
+* SKLearn
+* SciPy
+* Matplotlib
+* Seaborn
+
+**Why did I choose the tools I did for this assignment?**
+<br><br>
+**SKLearn vs. SciPy**
+<br>
+For this assignment I chose to use a vast majority of methods/classifers from **SKLearn**. In this class, I primarily use SKlearn, but I have used Scipy before. SKLearn is definitely easier, as its documentation provides fully thoguht-out examples and very clear source code of their functions/methods. Scipy is usually more devoted to deeper kinds of calculations (I've used it previously for fourier transformations and signal processing). However, because this class primarily uses SKLearn, I chose to also use that for the majority of my portfolio.
+
+**Strengths of SKLearn:**
+* Main strengths are accessiblity, adaptability, and simplicity.
+* Very easy for beginners to grasp basic concepts.
+* License allows you to upstream changes vwithout restrictions on commerical use.
+
+**Strengths of SciPy**
+* Open-source, does not cost anything
+* Available libraries make it easy to convert to C or Fortran code
+* Has a lot of correlating libraries with Numpy which makes it easy to use the two together
+
+
+**Seaborn vs. Matplotlib**
+<br>
+For this assignment, I used both matplotlib and seaborn. I usually like to add more customizations using matplotlib (such as titles, axis rotation, etc) but I prefer the different colore palettes of seaborn. When choosing a tool, you have to keep in mind what is best for visualizing your data. Both seaborn and matplotlib provide an excellent amount of different visualizations, but each different library can provide better visualizations than others. For example, I prefer using **matplotlib's scatterplot function** over seaborn's because of the usability and aesthetics.
+
+**Strengths of Seaborn**
+* Use default themes that are aesthetically pleasing.
+* You can set custom color palettes.
+* Makes attractive statistical plots.
+* Easily and flexible for displaying distributions.
+
+**Strengths of Matplotlib**
+* Can be automated to adapt to the data that it receives as input. 
+* Simple and easy to grasp for beginners.
+* asier to use for people who have had prior experience with Matlab.
+
+
+Now, I will talk about my process for the **Clustering** section of this portfolio (which is the next section). 
+
+For this section, I wanted to predict the quality of wine (high/low) depending on different predictors. To do this, I had to:
+
+* Encode the color of the wine to make it easier to manipulate, along with other categorical variables.
+* Define what a 'high' anmd 'low' quality wine was, without being too biased.
+* Determine what type of clustering I wanted to use, and how it performed.
+* Determine if there was a better way to come to this prediction (in terms of other models, or different types of algorithms). 
+
+I enjoy making a list of what I want to accomplish before I start working on a problem, so this is why this section comes first in this portfolio.
+
+I explain more about why I chose my clustering methods in the **Compare Section** of this portfolio, which I believe should also count for **Workflow :)**.
 
 
 ## Clustering Level 3

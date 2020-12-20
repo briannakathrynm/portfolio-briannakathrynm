@@ -24,10 +24,28 @@ Skills in this chapter:
 Apply multiple representations and compare and contrast them for different end results.
 
 
-**Workflow Level 3**
+## Unstructured Level 3
+For this portion of my portfolio, I will be briefly touching upon the different representations of unstructured data covered in **Assignment 12**. To refresh, here are the different methods we can use:
+
+**CountVectorizer**
 <br>
-Scope, choose an appropriate tool pipeline and solve data science problems, describe strengths and weakensses of common tools,
+Returns an encoded vector with a length of the entire vocabulary and an integer count for the number of times each word appeared in the document.
+
+**TfidfVectorizer**
+<br>
+Allows use to tokenize documents, learn similar vocabularies and the frequencies/weights of different works in documents (but not across documents), and allows you to encode new documents.
+
+**HashingVectorizer**
+<br>
+Uses a one-way hash of words to convert them into integers, and then tokenizes and encodes the documents as needed.
+
+
+For this portfolio, I will be comparing and contrasting **CountVectorizer** with **HashingVectorizer**. Here are the similarities and differences between these two methods:
+* HashingVectorizer converts the collection of text documents to a matrix of occurrences, while CountVectorizer converts it to a matrix of counts.
+* HashingVectorizer is very low memory scalable to large datasets as there is no need to store a vocabulary dictionary in memory.
+
+CountVectorizer is very straightforward, so I'm mostly highlighting the differences in HashVectorizer.
 
 ```python
-# Fake news assignment
+
 ```
