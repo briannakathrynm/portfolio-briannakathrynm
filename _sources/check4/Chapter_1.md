@@ -49,6 +49,8 @@ Select optimal parameters based of mutiple quantitative criteria and automate pa
 
 
 ## Workflow Level 3
+
+
 For this section, I will go over my process for the next section (which involves clustering and other skills). I will also go over what I want to achieve using these models, and other tools that could also be used to replace what I am using.
 
 **Common Tools in Data Science**
@@ -107,6 +109,8 @@ I explain more about why I chose my clustering methods in the **Compare Section*
 
 
 ## Clustering Level 3
+
+
 I was only missing the descriptions of the clustering techniques to earn this skill in my last check, so I will add descriptions as necessary.
 
 ```python
@@ -440,12 +444,14 @@ print(cross_val)
 ```
 
 ## Compare Level 2
+
+
 For this section, I will be comparing the two above models (Decision Trees and KNN, as well as Naive Bayes just for fun), as well as the different metrics used to evaluate them, as well as the trade-offs when applying them.
 
 
 **Comparing Decision Trees, Naive Bayes, and KNN in Specific Terms**
 <br>
-Both methods are used for classification, but there are many differences in the two models.
+Both methods are used for classification, but there are many differences in the three models.
 
 
 **Naive Bayes**
@@ -597,7 +603,9 @@ With a model with **high variance:**
 * Try a different model type
 
 
-# Optimize Level 3
+## Optimize Level 3
+
+
 Going off of the previous section and the criteria for the KNN model, I will now optimize the parameters of our model to insure we have the lowest variance and the lowest bias possible.
 <br><br>
 To do this, I will optimize the following values:
