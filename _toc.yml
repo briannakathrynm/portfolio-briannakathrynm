@@ -21,6 +21,6 @@
     - file: check2/Chapter_4
 - part: Submission 4
   chapters:
-    - file: submission_4_intro
+    - file: submission_4
     - file: check4/Chapter_1
     - file: check4/Chapter_2
