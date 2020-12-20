@@ -13,10 +13,8 @@ jupyter:
     name: python3
 ---
 
-# Check 4 Chapter 3
-Skills in this chapter:
-* Unstructured Level 3
-* Workflow Level 3
+# Submission 4 - Chapter 2
+In this chapter I have demonstrated **unstructured level 3**.
 
 
 **Unstructured Level 3**
@@ -45,6 +43,72 @@ For this portfolio, I will be comparing and contrasting **CountVectorizer** with
 * HashingVectorizer is very low memory scalable to large datasets as there is no need to store a vocabulary dictionary in memory.
 
 CountVectorizer is very straightforward, so I'm mostly highlighting the differences in HashVectorizer.
+
+
+For this assignment, I will be completing Assignment 12 with both **CountVectorizer** and **HashVectorizer**, and then comparing the results.
+
+```python
+# Imports
+from sklearn.metrics import accuracy_score
+from math import sqrt
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.model_selection import train_test_split
+import pandas as pd
+from sklearn.metrics.pairwise import euclidean_distances
+import numpy as np
+```
+
+**Using CountVectorizer**
+
+```python
+# Loading Data
+news = pd.read_csv("fake_or_real_news.csv")
+news.head()
+```
+
+```python
+# Dropping labels that are not necessary
+news.drop(labels=['id','title'], axis='columns', inplace=True)
+news.head()
+# Separate text from labels
+text = news['text']
+labels = news['label']
+# Vectorize Data
+counts = CountVectorizer(analyzer = "word")
+ng_vec = counts.fit_transform(text).toarray()
+# get_feature_names method will return them as a sorted list instead of a dictionary with numbers.
+counts_df = pd.DataFrame(ng_vec, columns=counts.get_feature_names())
+```
+
+```python
+# Train, test, split
+X_train, X_test, y_train, y_test = train_test_split(counts_df, labels, test_size = 1000)
+
+# Naive Bayes Model
+clf = MultinomialNB()
+clf.fit(X_train, y_train)
+# Scoring the model
+clf.score(X_test, y_test)
+# Making predictions on test data
+y_pred_test = clf.predict(X_test)
+# Making predictions on training data
+y_pred_train = clf.predict(X_train)
+# Training Accuracy
+train_acc = accuracy_score(y_train, y_pred_train)
+# Testing Accuracy
+test_acc = accuracy_score(y_test,y_pred_test)
+```
+
+```python
+train_acc
+```
+
+```python
+test_acc
+```
+
+**HashVectorizer**
 
 ```python
 
