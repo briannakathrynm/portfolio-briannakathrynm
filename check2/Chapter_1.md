@@ -13,7 +13,7 @@ jupyter:
     name: python3
 ---
 
-# Chapter 1
+#  Submission 2 - Chapter 1
 I've demonstrated level 3 for regression in this chapter.
 
 
@@ -23,6 +23,9 @@ Can fit and explain nonlinear regression
 
 
 ## Regression Level 3
+**What is non-linear regression?**
+<br>
+In the most simple terms, non-linear regression is regression that is **not linear**. However, this also means that non-linear regresssion can be fit to a bunch of different curves because its definition is so fluid. Below I will be fitting a model with both linear and non-linear regresssion.
 
 ```python
 # Imports
