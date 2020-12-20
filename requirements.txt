@@ -6,3 +6,4 @@ pandas
 seaborn
 jupytext
 xlrd
+sphinxcontrib-bibtex<2.0.0
