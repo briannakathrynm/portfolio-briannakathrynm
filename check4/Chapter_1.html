@@ -1,0 +1,966 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submission 4 - Chapter 1 &#8212; CSC 310 Portfolio</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Submission 4 - Chapter 2" href="Chapter_2.html" />
+    <link rel="prev" title="Portfolio Check 4" href="../submission_4_intro.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">CSC 310 Portfolio</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to your 310 Portfolio
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  About
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/index.html">
+   About Me
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/index.html#data-science-to-me">
+   Data Science, to me
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/grading.html">
+   Compute the Grade for CSC/DSP 310
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Submission 1
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../submission_1_intro.html">
+   Portfolio Check 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../check1/Chapter_1.html">
+   Submission 1 - Chapter 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../check1/Chapter_2.html">
+   Submission 1 - Chapter 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../check1/Chapter_3.html">
+   Submission 1 - Chapter 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../check1/Chapter_4.html">
+   Submission 1 - Chapter 4
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Submission 2
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../submission_2_intro.html">
+   Portfolio Check 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../check2/Chapter_1.html">
+   Submission 2 - Chapter 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../check2/Chapter_2.html">
+   Submission 2 - Chapter 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../check2/Chapter_3.html">
+   Submission 2 - Chapter 3
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Submission 4
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../submission_4_intro.html">
+   Portfolio Check 4
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Submission 4 - Chapter 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#optimize-level-3">
+   Optimize Level 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_2.html">
+   Submission 4 - Chapter 2
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/check4/Chapter_1.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Submission 4 - Chapter 1
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#workflow-level-3">
+     Workflow Level 3
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clustering-level-3">
+     Clustering Level 3
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#evaluate-level-3">
+     Evaluate Level 3
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compare-level-2">
+     Compare Level 2
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compare-level-3">
+     Compare Level 3
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optimize-level-3">
+   Optimize Level 3
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="submission-4-chapter-1">
+<h1>Submission 4 - Chapter 1<a class="headerlink" href="#submission-4-chapter-1" title="Permalink to this headline">¶</a></h1>
+<p>I’ve demonstrated <strong>workflow level 3</strong>, <strong>clustering level 3</strong>, <strong>evaluate level 3</strong>, <strong>compare level 2 and 3</strong>, and <strong>optimize level 3</strong> in this chapter.</p>
+<p><strong>Workflow Level 3</strong>
+<br>
+Scope, choose an appropriate tool pipeline and solve data science problems, describe strengths and weakensses of common tools.</p>
+<p><strong>Clustering Level 3</strong>
+<br>
+Apply multiple clustering techniques, and interpret results</p>
+<p><strong>Evaluate Level 3</strong>
+<br>
+Evaluate a model with multiple metrics and cross validation.
+<br><br>
+This skill is present in the multiple metrics used to assess the different types of clustering methods, as well as performing cross-validation in the Iris dataset.</p>
+<p><strong>Compare Level 2</strong>
+<br>
+Compare model classes in specific terms and fit models in terms of traditional model performance metrics.
+<br><br>
+<strong>Compare Level 3</strong>
+<br>
+Evaluate tradeoffs between different model comparison types.</p>
+<p><strong>Optimize Level 3</strong>
+<br>
+Select optimal parameters based of mutiple quantitative criteria and automate parameter tuning.</p>
+<div class="section" id="workflow-level-3">
+<h2>Workflow Level 3<a class="headerlink" href="#workflow-level-3" title="Permalink to this headline">¶</a></h2>
+<p>For this section, I will go over my process for the next section (which involves clustering and other skills). I will also go over what I want to achieve using these models, and other tools that could also be used to replace what I am using.</p>
+<p><strong>Common Tools in Data Science</strong>
+<br>
+There are many different tools that can be used and applied in data science (whether for machine learning purposes, or just statistical). I will list some of these tools that I have personally used before below:</p>
+<ul class="simple">
+<li><p>SKLearn</p></li>
+<li><p>SciPy</p></li>
+<li><p>Matplotlib</p></li>
+<li><p>Seaborn</p></li>
+</ul>
+<p><strong>Why did I choose the tools I did for this assignment?</strong>
+<br><br>
+<strong>SKLearn vs. SciPy</strong>
+<br>
+For this assignment I chose to use a vast majority of methods/classifers from <strong>SKLearn</strong>. In this class, I primarily use SKlearn, but I have used Scipy before. SKLearn is definitely easier, as its documentation provides fully thoguht-out examples and very clear source code of their functions/methods. Scipy is usually more devoted to deeper kinds of calculations (I’ve used it previously for fourier transformations and signal processing). However, because this class primarily uses SKLearn, I chose to also use that for the majority of my portfolio.</p>
+<p><strong>Strengths of SKLearn:</strong></p>
+<ul class="simple">
+<li><p>Main strengths are accessiblity, adaptability, and simplicity.</p></li>
+<li><p>Very easy for beginners to grasp basic concepts.</p></li>
+<li><p>License allows you to upstream changes vwithout restrictions on commerical use.</p></li>
+</ul>
+<p><strong>Strengths of SciPy</strong></p>
+<ul class="simple">
+<li><p>Open-source, does not cost anything</p></li>
+<li><p>Available libraries make it easy to convert to C or Fortran code</p></li>
+<li><p>Has a lot of correlating libraries with Numpy which makes it easy to use the two together</p></li>
+</ul>
+<p><strong>Seaborn vs. Matplotlib</strong>
+<br>
+For this assignment, I used both matplotlib and seaborn. I usually like to add more customizations using matplotlib (such as titles, axis rotation, etc) but I prefer the different colore palettes of seaborn. When choosing a tool, you have to keep in mind what is best for visualizing your data. Both seaborn and matplotlib provide an excellent amount of different visualizations, but each different library can provide better visualizations than others. For example, I prefer using <strong>matplotlib’s scatterplot function</strong> over seaborn’s because of the usability and aesthetics.</p>
+<p><strong>Strengths of Seaborn</strong></p>
+<ul class="simple">
+<li><p>Use default themes that are aesthetically pleasing.</p></li>
+<li><p>You can set custom color palettes.</p></li>
+<li><p>Makes attractive statistical plots.</p></li>
+<li><p>Easily and flexible for displaying distributions.</p></li>
+</ul>
+<p><strong>Strengths of Matplotlib</strong></p>
+<ul class="simple">
+<li><p>Can be automated to adapt to the data that it receives as input.</p></li>
+<li><p>Simple and easy to grasp for beginners.</p></li>
+<li><p>asier to use for people who have had prior experience with Matlab.</p></li>
+</ul>
+<p>Now, I will talk about my process for the <strong>Clustering</strong> section of this portfolio (which is the next section).</p>
+<p>For this section, I wanted to predict the quality of wine (high/low) depending on different predictors. To do this, I had to:</p>
+<ul class="simple">
+<li><p>Encode the color of the wine to make it easier to manipulate, along with other categorical variables.</p></li>
+<li><p>Define what a ‘high’ anmd ‘low’ quality wine was, without being too biased.</p></li>
+<li><p>Determine what type of clustering I wanted to use, and how it performed.</p></li>
+<li><p>Determine if there was a better way to come to this prediction (in terms of other models, or different types of algorithms).</p></li>
+</ul>
+<p>I enjoy making a list of what I want to accomplish before I start working on a problem, so this is why this section comes first in this portfolio.</p>
+<p>I explain more about why I chose my clustering methods in the <strong>Compare Section</strong> of this portfolio, which I believe should also count for <strong>Workflow :)</strong>.</p>
+</div>
+<div class="section" id="clustering-level-3">
+<h2>Clustering Level 3<a class="headerlink" href="#clustering-level-3" title="Permalink to this headline">¶</a></h2>
+<p>I was only missing the descriptions of the clustering techniques to earn this skill in my last check, so I will add descriptions as necessary.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imports</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span><span class="p">,</span><span class="n">accuracy_score</span><span class="p">,</span> <span class="n">silhouette_score</span><span class="p">,</span> <span class="n">adjusted_rand_score</span><span class="p">,</span> <span class="n">adjusted_mutual_info_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">average_precision_score</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Loading data</span>
+<span class="n">wine_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;winequality.csv&quot;</span><span class="p">)</span>
+<span class="n">wine_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">wine_data</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exploring classifications: by quality</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">wine_data</span><span class="p">[</span><span class="s1">&#39;quality&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Encoding color as 0=white, 1=red</span>
+<span class="n">wine_data</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wine_data</span><span class="o">.</span><span class="n">color</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="s2">&quot;red&quot;</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">wine_data</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Separating Quality into High/Low</span>
+<span class="n">quality</span> <span class="o">=</span> <span class="n">wine_data</span><span class="p">[</span><span class="s2">&quot;quality&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">quality</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">num</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">:</span>
+        <span class="n">temp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Low&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">temp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;High&quot;</span><span class="p">)</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">temp</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ranking&quot;</span><span class="p">])</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">wine_data</span><span class="p">,</span><span class="n">temp</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">&quot;quality&quot;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Method 1: Using KMeans</strong>
+<br><br>
+<em>What is K-Means Clustering?</em>
+<br></p>
+<ul class="simple">
+<li><p>Partitions datasets into K defined subgroups (non-overlapping) called clusters</p></li>
+<li><p>Each data point can only belong to one group</p></li>
+<li><p>K-Means then assigns data points to a cluster such that the sum of the squared distance between the data points and the cluster’s centroid is at the minimum</p></li>
+</ul>
+<p><em>How does K-Means Clustering Work?</em></p>
+<ul class="simple">
+<li><p>Specify the number of clusters (K)</p></li>
+<li><p>Intialize centroids by selecting K points for the centroids</p></li>
+<li><p>Iterate until there is no change in the centroids, i.e. the clusters are not changing anymore</p></li>
+</ul>
+<p><strong>Source:</strong></p>
+<ul class="simple">
+<li><p>https://towardsdatascience.com/k-means-clustering-algorithm-applications-evaluation-methods-and-drawbacks-aa03e644b48a</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Separating target from feature variables</span>
+<span class="n">X</span><span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;ranking&quot;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;ranking&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">kmeans</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">cent</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">cluster_centers_</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">y_kmeans</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">y_kmeans</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">centroids_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">kmeans</span><span class="o">.</span><span class="n">cluster_centers_</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plotting relationship between alcohol and density when predicting quality of wine</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">X</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;alcohol&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;density&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span> <span class="n">y_kmeans</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;flare&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">mark_right</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">centroids_df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;alcohol&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;density&#39;</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">80</span><span class="p">,</span> <span class="n">mark_right</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compiling different metrics</span>
+<span class="n">metrics1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;metric&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Silhouette&quot;</span><span class="p">,</span><span class="s2">&quot;Rand Score&quot;</span><span class="p">,</span><span class="s2">&quot;Mutual Info&quot;</span><span class="p">],</span>
+                           <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">silhouette_score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y_kmeans</span><span class="p">),</span><span class="n">adjusted_rand_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_kmeans</span><span class="p">),</span><span class="n">adjusted_mutual_info_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">y_kmeans</span><span class="p">)]})</span>
+<span class="n">metrics1</span>
+</pre></div>
+</div>
+<p><strong>Method 2: Using Mean Shift</strong>
+<br><br>
+<em>What is Mean Shift Clustering?</em>
+<br></p>
+<ul class="simple">
+<li><p>Mean Shift is formed on the idea of KDE (kernel density estimation) which is a method used to estimate the underlying distribution of the data.</p></li>
+<li><p>A kernel/weighting function is placed on each point in the dataset, and then updates the centroids of the dataset based on the processing of the data.</p></li>
+<li><p>Aims to discover “blobs” in a smooth density of samples. It is a centroid-based algorithm, which works by updating candidates for centroids to be the mean of the points within a given region.</p></li>
+</ul>
+<p><em>How does Mean Shift Clustering Work?</em></p>
+<ul class="simple">
+<li><p>At every iteration the kernel is shifted to the centroid or the mean of the points within it.</p></li>
+<li><p>The method of calculating this mean depends on the choice of the kernel. In this case if a Gaussian kernel is chosen instead of a flat kernel, then every point will first be assigned a weight which will decay exponentially as the distance from the kernel’s center increases.</p></li>
+<li><p>At convergence, there will be no direction at which a shift can accommodate more points inside the kernel, and iteration most likely will end.</p></li>
+</ul>
+<p><strong>Sources:</strong>
+<br></p>
+<ul class="simple">
+<li><p>https://scikit-learn.org/stable/modules/generated/sklearn.cluster.MeanShift.html</p></li>
+<li><p>https://www.sciencedirect.com/science/article/pii/S0047259X14002644?via%3Dihub</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">MeanShift</span><span class="p">,</span> <span class="n">estimate_bandwidth</span>
+<span class="n">bandwidth</span> <span class="o">=</span> <span class="n">estimate_bandwidth</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">msc</span> <span class="o">=</span> <span class="n">MeanShift</span><span class="p">(</span><span class="n">bandwidth</span><span class="o">=</span><span class="n">bandwidth</span><span class="p">,</span> <span class="n">bin_seeding</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">msc</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">labels</span> <span class="o">=</span> <span class="n">msc</span><span class="o">.</span><span class="n">labels_</span>
+<span class="n">cluster_centers</span> <span class="o">=</span> <span class="n">msc</span><span class="o">.</span><span class="n">cluster_centers_</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">labels_unique</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+<span class="n">n_clusters_</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">labels_unique</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;number of estimated clusters : </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">n_clusters_</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">y_msc</span> <span class="o">=</span> <span class="n">msc</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">y_msc</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">centroids_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">cluster_centers</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+<span class="n">centroids_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plotting relationship between alcohol and density when predicting quality of wine</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">X</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;alcohol&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;density&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span> <span class="n">y_msc</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;flare&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">mark_right</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">centroids_df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;alcohol&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;density&#39;</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">80</span><span class="p">,</span> <span class="n">mark_right</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compiling different metrics</span>
+<span class="n">metrics2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;metric&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Silhouette&quot;</span><span class="p">,</span><span class="s2">&quot;Rand Score&quot;</span><span class="p">,</span><span class="s2">&quot;Mutual Info&quot;</span><span class="p">],</span>
+                           <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">silhouette_score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y_msc</span><span class="p">),</span><span class="n">adjusted_rand_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_msc</span><span class="p">),</span><span class="n">adjusted_mutual_info_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">y_msc</span><span class="p">)]})</span>
+<span class="n">metrics2</span>
+</pre></div>
+</div>
+<p><strong>Method 3: Agglomerative Clustering</strong>
+<br><br>
+<em>What is Agglomerative Clustering?</em>
+<br></p>
+<ul class="simple">
+<li><p>Partitions datasets into K defined subgroups (non-overlapping) called clusters</p></li>
+<li><p>One of the most common types of hierarchial clustering</p></li>
+<li><p>Agglomerative clustering works in a “bottom-up” manner. (objects are considered leafs initially, and then are combined into nodes (clusters).</p></li>
+</ul>
+<p><em>How does Agglomerative Clustering Work?</em></p>
+<ul class="simple">
+<li><p>Starts by treating each object as a singleton cluster.</p></li>
+<li><p>Pairs of clusters are successively merged until all clusters have been merged into one big cluster containing all objects.</p></li>
+<li><p>The result is a tree-based representation of the objects, named dendrogram.</p></li>
+</ul>
+<p><strong>Sources</strong>:</p>
+<ul class="simple">
+<li><p>https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html</p></li>
+<li><p>https://www.datanovia.com/en/lessons/agglomerative-hierarchical-clustering/</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">AgglomerativeClustering</span>
+<span class="n">ac</span> <span class="o">=</span> <span class="n">AgglomerativeClustering</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">ac</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ac</span><span class="o">.</span><span class="n">labels_</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">y_ac</span> <span class="o">=</span> <span class="n">ac</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plotting relationship between alcohol and density when predicting quality of wine</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">X</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;alcohol&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;density&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span> <span class="n">y_ac</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;flare&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">mark_right</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compiling different metrics</span>
+<span class="n">metrics3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;metric&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Silhouette&quot;</span><span class="p">,</span><span class="s2">&quot;Rand Score&quot;</span><span class="p">,</span><span class="s2">&quot;Mutual Info&quot;</span><span class="p">],</span>
+                           <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">silhouette_score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y_ac</span><span class="p">),</span><span class="n">adjusted_rand_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_ac</span><span class="p">),</span><span class="n">adjusted_mutual_info_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">y_ac</span><span class="p">)]})</span>
+<span class="n">metrics3</span>
+</pre></div>
+</div>
+<p>Now, I will compile all of the different accuracies, along with the scoring method used for all of the different kinds of clustering.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Combining all dataframes</span>
+<span class="n">result1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span> <span class="o">=</span> <span class="n">metrics1</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">metrics2</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;metric&quot;</span><span class="p">])</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span> <span class="o">=</span> <span class="n">result1</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">metrics3</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;metric&quot;</span><span class="p">])</span>
+<span class="n">result</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;score_x&quot;</span><span class="p">:</span><span class="s2">&quot;K-means&quot;</span><span class="p">,</span> <span class="s2">&quot;score_y&quot;</span><span class="p">:</span><span class="s2">&quot;Mean Shift&quot;</span><span class="p">,</span> <span class="s2">&quot;score&quot;</span><span class="p">:</span><span class="s2">&quot;Agglomerative Clustering&quot;</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>From the above table, we can see that <strong>K-Means Clustering</strong> had an overall better silhouette score, <strong>Mean Shift</strong> had a better <strong>Mutual Info</strong> score, and <strong>Agg. Clustering</strong> had a better <strong>Rand Score</strong>.</p>
+</div>
+<div class="section" id="evaluate-level-3">
+<h2>Evaluate Level 3<a class="headerlink" href="#evaluate-level-3" title="Permalink to this headline">¶</a></h2>
+<p>I will now perform some cross-validation for the <strong>Iris Dataset</strong> shown in class, along with using different train and test sizes for the data.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Loading data</span>
+<span class="n">iris_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Iris.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Brief visualization</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">iris_df</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Species&#39;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;flare&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Target and feature variables</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">iris_df</span><span class="p">[[</span><span class="s1">&#39;SepalLengthCm&#39;</span><span class="p">,</span> <span class="s1">&#39;SepalWidthCm&#39;</span><span class="p">,</span> <span class="s1">&#39;PetalLengthCm&#39;</span><span class="p">,</span> <span class="s1">&#39;PetalWidthCm&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">iris_df</span><span class="p">[</span><span class="s1">&#39;Species&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+</div>
+<p>Now, let’s evaluate using <strong>cross validation~</strong> as well as <strong>accuracy scores</strong>, Which I always forget to do, but I am definitely remembering to do this time.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using a loop to change test sizes</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
+<span class="n">testsize_range</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span><span class="o">/</span><span class="mi">10</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">)]</span>
+<span class="n">testsize_scores_dt</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">crossval_scores_dt</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">testsize</span> <span class="ow">in</span> <span class="n">testsize_range</span><span class="p">:</span>
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="n">testsize</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">dt</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+    <span class="c1"># See, I remembered this time</span>
+    <span class="n">cross_val</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">dt</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="n">scores</span> <span class="o">=</span> <span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+    <span class="n">testsize_scores_dt</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">scores</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+    <span class="n">crossval_scores_dt</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cross_val</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">final_results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;test_size&#39;</span><span class="p">:</span> <span class="n">testsize_range</span><span class="p">,</span>
+                           <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="n">testsize_scores_dt</span><span class="p">,</span> <span class="s2">&quot;cross validation&quot;</span><span class="p">:</span> <span class="n">crossval_scores_dt</span><span class="p">})</span>
+<span class="n">final_results</span>
+</pre></div>
+</div>
+<p>As we can see, it seems that a <strong>test_size of 0.3 seems to work best for the Iris dataset</strong>. Accurracys of 1 might mean that the dataset is too overfit, or it might be overtrained. The <strong>cross validation score</strong> for test_size 0.3 also fits within the accepted range, so this test size would work perfectly.</p>
+<p>Just to make sure I absolutely get <strong>Level 3 for Evaluate</strong>, I will perform KNN on this same dataset and then also perform cross-validation 15 times.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using similar loop from before</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="n">k_range</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">crossval_scores_knn</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">acc_scores_knn</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># Using 15 fold cross validation</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">k_range</span><span class="p">:</span>
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="c1"># See, I remembered this time</span>
+    <span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="n">k</span><span class="p">)</span>
+    <span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="c1"># Cross Val score</span>
+    <span class="n">cross_val</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">knn</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">crossval_scores_knn</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cross_val</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+    <span class="c1"># Accuracy Score</span>
+    <span class="n">accuracy_score_knn</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">acc_scores_knn</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">accuracy_score_knn</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compiling into dataframe</span>
+<span class="n">cv_results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;k&#39;</span><span class="p">:</span> <span class="n">k_range</span><span class="p">,</span> <span class="s2">&quot;cross validation&quot;</span><span class="p">:</span> <span class="n">crossval_scores_knn</span><span class="p">,</span>
+                          <span class="s2">&quot;accuracy&quot;</span><span class="p">:</span> <span class="n">acc_scores_knn</span><span class="p">})</span>
+<span class="n">cv_results</span>
+</pre></div>
+</div>
+<p>We can see that <strong>K=7</strong> has the best cross validation score <strong>AND</strong> accuracy (CV Score = 0.961905, Acc = 0.971429).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="c1"># Using our optimal test size from earlier, as well as our optimal k</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">knn2</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">knn2</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="c1"># Predicting values</span>
+<span class="n">pred_knn2</span><span class="o">=</span><span class="n">knn2</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">pred_knn2</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Computing CV again just to show</span>
+<span class="n">cross_val</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">knn2</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">score_knn_1</span> <span class="o">=</span> <span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">pred_knn2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cross_val</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="compare-level-2">
+<h2>Compare Level 2<a class="headerlink" href="#compare-level-2" title="Permalink to this headline">¶</a></h2>
+<p>For this section, I will be comparing the two above models (Decision Trees and KNN, as well as Naive Bayes just for fun), as well as the different metrics used to evaluate them, as well as the trade-offs when applying them.</p>
+<p><strong>Comparing Decision Trees, Naive Bayes, and KNN in Specific Terms</strong>
+<br>
+Both methods are used for classification, but there are many differences in the two models.</p>
+<p><strong>Naive Bayes</strong></p>
+<ul class="simple">
+<li><p>Supervised learning.</p></li>
+<li><p>Linear classifer (unlike KNN).</p></li>
+<li><p>Highly accurate when applied to <em>big data</em> or large feature sets.</p></li>
+<li><p>More hyperparameters than KNN (alpha and beta).</p></li>
+<li><p>Does not suffer from the curse of dimensionality.</p></li>
+</ul>
+<p><strong>Decision Trees</strong></p>
+<ul class="simple">
+<li><p>Supervised learning.</p></li>
+<li><p>Easiest to explain and understand.</p></li>
+<li><p>Over-fitting is a major problem with decision trees.</p></li>
+<li><p>Works best for a small number of classes.</p></li>
+<li><p>Outperformed by KNN and GNB when it comes to <em>rare occurences</em> such as outliers, as decision trees sometime require pruning.</p></li>
+</ul>
+<p><strong>KNN</strong></p>
+<ul class="simple">
+<li><p>Unsupervised learning.</p></li>
+<li><p>All the features must be numeric.</p></li>
+<li><p>Doesn’t require training.</p></li>
+<li><p>You would want to choose KNN over GNB if there is high conditional independence among predictors.</p></li>
+<li><p>Suffers from the curse of dimensionality in some cases (more variables/features leads to sample size growing exponentially).</p></li>
+</ul>
+<p>In The past section involving the <strong>Iris Dataset</strong>, I have used both a Decision Tree Classifer, Naive Bayes Classifer, as well as a KNN Classifer to yield results.
+<br><br>
+Previously for the DT Classifer and the KNN Classifer, I assessed the two model’s results using the <em>score method</em> as well as the <em>cross_val_score</em> function. Below I will compile a dataframe with the different metrics from both of these models, as well as getting new metrics for KNN and GNB.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Comparing accuracy/cross_vcal_score of test size for KNN</span>
+<span class="c1"># Using a loop to change test sizes (same as bework best for a small number of classesfore, but for knn)</span>
+<span class="n">testsize_range</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span><span class="o">/</span><span class="mi">10</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">)]</span>
+<span class="n">testsize_scores_knn</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">crossval_scores_knn</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">testsize</span> <span class="ow">in</span> <span class="n">testsize_range</span><span class="p">:</span>
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="n">testsize</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+    <span class="c1"># See, I remembered this time</span>
+    <span class="n">cross_val</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">knn</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="n">scores</span> <span class="o">=</span> <span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+    <span class="n">testsize_scores_knn</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">scores</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+    <span class="n">crossval_scores_knn</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cross_val</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Comparing accuracy/cross_vcal_score of test size for NB</span>
+<span class="n">testsize_range</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span><span class="o">/</span><span class="mi">10</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">)]</span>
+<span class="n">testsize_scores_gnb</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">crossval_scores_gnb</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">gnb</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">testsize</span> <span class="ow">in</span> <span class="n">testsize_range</span><span class="p">:</span>
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="n">testsize</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">gnb</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">gnb</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+    <span class="c1"># See, I remembered this time</span>
+    <span class="n">cross_val</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">gnb</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="n">scores</span> <span class="o">=</span> <span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+    <span class="n">testsize_scores_gnb</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">scores</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+    <span class="n">crossval_scores_gnb</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cross_val</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">final_results_knn</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;test_size&#39;</span><span class="p">:</span> <span class="n">testsize_range</span><span class="p">,</span>
+                           <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="n">testsize_scores_knn</span><span class="p">,</span> <span class="s2">&quot;cross validation&quot;</span><span class="p">:</span> <span class="n">crossval_scores_knn</span><span class="p">})</span>
+<span class="n">final_results_gnb</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;test_size&#39;</span><span class="p">:</span> <span class="n">testsize_range</span><span class="p">,</span>
+                           <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="n">testsize_scores_gnb</span><span class="p">,</span> <span class="s2">&quot;cross validation&quot;</span><span class="p">:</span> <span class="n">crossval_scores_gnb</span><span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span> <span class="o">=</span> <span class="n">final_results</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">final_results_knn</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;test_size&quot;</span><span class="p">])</span>
+<span class="n">results_final</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span> <span class="o">=</span> <span class="n">results</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">final_results_gnb</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;test_size&quot;</span><span class="p">])</span>
+<span class="n">results_final</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;score_x&quot;</span><span class="p">:</span><span class="s2">&quot;Score DT&quot;</span><span class="p">,</span> <span class="s2">&quot;score_y&quot;</span><span class="p">:</span><span class="s2">&quot;Score KNN&quot;</span><span class="p">,</span> 
+                        <span class="s2">&quot;cross validation_x&quot;</span><span class="p">:</span><span class="s2">&quot;Cross Val Score DT&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;cross validation_y&quot;</span><span class="p">:</span><span class="s2">&quot;Cross Val Score KNN&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;score&quot;</span><span class="p">:</span><span class="s2">&quot;Score GNB&quot;</span><span class="p">,</span> 
+                        <span class="s2">&quot;cross validation&quot;</span><span class="p">:</span><span class="s2">&quot;Cross Val Score GNB&quot;</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>As we can see, our Decision Tree did suffer through some <em>mild overfitting</em>, as discovered in the previous section. However, it had better <strong>cross_val_score</strong> than the GNB model with the range of test sizes that it was used on. In terms of consistent model performance, KNN performed very well in terms of <strong>cross_val_score</strong> and <strong>score/accuracy</strong>. This is examined more in the previous sections as well. Unlike for other datasets that I’ve used in the past, the Naive Bayes model did not perform as well as anticipated. This is probably due to the fact that the Iris dataset is not that large, and is perfect in terms of small classes (3 different types of Irises) for the KNN classifer.</p>
+</div>
+<div class="section" id="compare-level-3">
+<h2>Compare Level 3<a class="headerlink" href="#compare-level-3" title="Permalink to this headline">¶</a></h2>
+<p>Now I will evaluate the different tradeoffs that can be made by choosing from the models discussed in the previous <em>Compare</em> section (Decision Trees, Naive Bayes, KNN).</p>
+<p>Overall, each of these models has a decision to make in terms of the <strong>bias variance trade-ff</strong> This tradeoff is simply explained as:</p>
+<ul class="simple">
+<li><p>The model is too simple is often reflected in a biased model with fewer features and more regularization.</p></li>
+<li><p>The model is too complex when small changes are made that affect the data tremendously, due to high variance with more features and less regularization.</p></li>
+</ul>
+<p>So what do you choose?</p>
+<ul class="simple">
+<li><p>More complex with less bias and more variance?</p></li>
+<li><p>More simple with more bias and less variance?</p></li>
+</ul>
+<p><strong>Trade-Offs of KNN</strong>
+<br></p>
+<ul class="simple">
+<li><p>There is a definite <strong>bias-variance trade-off</strong> when it comes to KNN classification. This means that if bias is reduced, the variance is increased and vice versa.
+<br><br></p></li>
+<li><p><em>Bias</em> is caused by highly correlated predictors, or misinterpretting the relationships between the features and the targets in a dataset.
+<br><br></p></li>
+<li><p><em>Variance</em> is caused by fluctuations in the training set. High variance can lead to the model having random noise in the data, and leading thje model to pay a lot of attention to the training data and in turn offer fewer generalizations on data that it has not yet seen.
+<br><br></p></li>
+<li><p>Together, bias and variance can lead to the model becoming <strong>over or under - fitted</strong>. How can we solve this?</p></li>
+</ul>
+<p><strong>Solution for KNN</strong>:</p>
+<ul class="simple">
+<li><p><strong>Cross Validation</strong>, as we have used previously in this Chapter, can introduce a <strong>validation data set</strong> along with the training and testing sets a model usually has.</p></li>
+<li><p>Considering what is important in your model can also help in discovering what is more important in terms of bias and variance. Ideally, low bias and low variance would make for a very well-fitted model, but that can not always occur. This is why introducing a validation set is a good solution.</p></li>
+</ul>
+<p><strong>Trade-Offs of Decision Trees</strong>
+<br>
+Similarly to KNN, Decision Trees also face a <strong>bias variance trade-off</strong>. However, solving this problem is a little bit different than KNN. <strong>Decision Trees are also known to have <em>high variance</em>, as they create specific branches and splits for samples of the training data, that are specific to this data.</strong></p>
+<ul class="simple">
+<li><p>In a DT, more roughness = more variance while more smoothness = more bias. When a model gets rougher, it gets more complex. When a model gets smoother, it gets less complex.</p></li>
+<li><p>To combat this problem, <strong>pruning the tree</strong> is used to compress the data and to reduce the dimensionality of the model, while still keeping complexity.</p></li>
+<li><p>Decreasing the accuracy of the model on the training data increases bias. This lowers variance, meaning your model better generalizes to unseen data (as explained in the KNN section).</p></li>
+</ul>
+<p><strong>Trade-Offs of Naive Bayes</strong>
+<br>
+Like other models discussed in this section, Naive Bayes also suffers from <strong>bias variance trade-off</strong>. There are also some solutions to this, such as <strong>tuning hyperparameters alpha and beta</strong>, which I will do in the next section for <strong>Level 3 for Optimize</strong>. Here are the different trade-offs for GNB:</p>
+<ul class="simple">
+<li><p>If alpha = 0 (high variance): our model is overfitted</p></li>
+<li><p>If alpha is large (high bias): posterior probabilities are the same</p></li>
+</ul>
+<p><strong>Other Solutions: Trying different Variations of NB</strong>
+There are different types of Naive Bayes classifiers that we can choose from, including:</p>
+<ul class="simple">
+<li><p>Bernoulli NB</p></li>
+<li><p>Multinomial NB</p></li>
+<li><p>Gaussian NB (which we used above)</p></li>
+</ul>
+<p><strong>Finally, general solutions for solving these trade-offs:</strong>
+<br>
+With a model with <strong>high bias:</strong></p>
+<ul class="simple">
+<li><p>Change the optimization algorithm of the model.</p></li>
+<li><p>Perform hyper-parameter tuning on the model.</p></li>
+<li><p>Switch the type of model.</p></li>
+</ul>
+<p>With a model with <strong>high variance:</strong></p>
+<ul class="simple">
+<li><p>Perform regularization using pruning (for DT), dropout (KNN/NB), or Lasso/Ridge Regression for Regression Models.</p></li>
+<li><p>Get more data to train on</p></li>
+<li><p>Try a different model type</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="optimize-level-3">
+<h1>Optimize Level 3<a class="headerlink" href="#optimize-level-3" title="Permalink to this headline">¶</a></h1>
+<p>Going off of the previous section and the criteria for the KNN model, I will now optimize the parameters of our model to insure we have the lowest variance and the lowest bias possible.
+<br><br>
+To do this, I will optimize the following values:</p>
+<ul class="simple">
+<li><p>n_neighbors, as before</p></li>
+<li><p>weights</p></li>
+<li><p>p (power parameter)</p></li>
+</ul>
+<p>I optimized these parameters briefly when comparing models in the earlier sections, but I want to agaijn try to optimize them even further.</p>
+<p>I will be using a <strong>GridSearch</strong> to perform the tuning of these hyperparameters.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
+<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">make_pipeline</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="c1"># Default is uniform</span>
+<span class="n">weights</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;uniform&quot;</span><span class="p">,</span> <span class="s2">&quot;distance&quot;</span><span class="p">]</span>
+<span class="c1"># Default 2 (euclidean distance)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="c1"># Number of neighbors, default 5, as before (same range)</span>
+<span class="n">k_range</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;n_neighbors&quot;</span><span class="p">:</span> <span class="n">k_range</span><span class="p">,</span>
+              <span class="s2">&quot;weights&quot;</span><span class="p">:</span> <span class="n">weights</span><span class="p">,</span>
+              <span class="s2">&quot;p&quot;</span><span class="p">:</span> <span class="n">p</span>
+              <span class="p">}</span>
+
+<span class="n">grid</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">estimator</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(),</span> 
+                    <span class="n">param_grid</span> <span class="o">=</span> <span class="n">param_grid</span><span class="p">,</span> 
+                    <span class="n">cv</span> <span class="o">=</span> <span class="mi">15</span><span class="p">,</span> <span class="c1"># 15, as used previously in the above section</span>
+                    <span class="n">scoring</span> <span class="o">=</span> <span class="s1">&#39;accuracy&#39;</span><span class="p">,</span> 
+                    <span class="n">refit</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="n">knn_model</span> <span class="o">=</span> <span class="n">make_pipeline</span><span class="p">(</span><span class="n">StandardScaler</span><span class="p">(),</span> <span class="n">grid</span><span class="p">)</span>
+<span class="n">knn_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">best_score_</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">best_params_</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We can see that with this optimization, the nubmer of neighbors for our KNN classifer is optimized at <strong>3</strong>, our p is optimized at <strong>1 (manhattan_distance)</strong>, and our weights are optimized to be <strong>uniform</strong>.</p>
+<p>Now, I will fit a model with these optimized paramters and compare it to the un-optimized version.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Comparing optimized vs. un-optimized KNN model</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">knn3</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="s2">&quot;uniform&quot;</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">knn3</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="c1"># Predicting values</span>
+<span class="n">pred_knn3</span><span class="o">=</span><span class="n">knn3</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">pred_knn3</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cross-val score and accuracy score for optimized model</span>
+<span class="c1"># Optimized Model</span>
+<span class="n">cross_val_opt</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">knn3</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">scores_opt</span> <span class="o">=</span> <span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">pred_knn3</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="c1"># Un-optimized Model</span>
+<span class="n">cross_val</span> <span class="o">=</span> <span class="n">cross_val</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">score_knn_1</span> <span class="o">=</span> <span class="n">score_knn_1</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Comparing the two models</span>
+<span class="n">compare_results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Cross_Val_Score&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">cross_val</span><span class="p">,</span> <span class="n">cross_val_opt</span><span class="p">],</span>
+                           <span class="s1">&#39;Accuracy&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">score_knn_1</span><span class="p">,</span> <span class="n">scores_opt</span><span class="p">]})</span>
+<span class="n">compare_results</span>
+</pre></div>
+</div>
+<p>We can see that the two models compare very similarly to each other, but this is also because the other model was optmized for test_size while our newly optimized model using GridSearch did not account for test size. I think it would be better to also add that in as well.</p>
+<p><strong>In Evaluate Level 3/Compare Level 2 sections, I automated the tuning of hyperparameters using loops. For this section I wanted to use GridSearch to showcase other ways you could tune these hyperparameters. To consider the automation of these parameters, please look at the aformentioned sections I listed here :)</strong></p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./check4"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../submission_4_intro.html" title="previous page">Portfolio Check 4</a>
+    <a class='right-next' id="next-link" href="Chapter_2.html" title="next page">Submission 4 - Chapter 2</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Brianna MacDonald<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

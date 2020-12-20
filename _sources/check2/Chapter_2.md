@@ -6,14 +6,14 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.2'
-      jupytext_version: 1.6.0
+      jupytext_version: 1.7.1
   kernelspec:
     display_name: Python 3
     language: python
     name: python3
 ---
 
-# Chapter 2
+#  Submission 2 - Chapter 2
 I've demonstrated **classification level 3**, **evaluate level 2 (and 3, if applicable)** and **clustering level 3** in this chapter.
 
 
