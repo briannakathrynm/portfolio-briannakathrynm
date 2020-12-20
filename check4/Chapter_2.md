@@ -23,7 +23,11 @@ Apply multiple representations and compare and contrast them for different end r
 
 
 ## Unstructured Level 3
-For this portion of my portfolio, I will be briefly touching upon the different representations of unstructured data covered in **Assignment 12**. To refresh, here are the different methods we can use:
+
+
+For this portion of my portfolio, I will be briefly touching upon the different representations of unstructured data covered in **Assignment 12**. 
+
+To refresh, here are the different methods we can use:
 
 **CountVectorizer**
 <br>
