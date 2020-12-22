@@ -19,3 +19,8 @@
     - file: check2/Chapter_2
     - file: check2/Chapter_3
     - file: check2/Chapter_4
+- part: Submission 4
+  chapters:
+    - file: submission_4
+    - file: check4/Chapter_1
+    - file: check4/Chapter_2
